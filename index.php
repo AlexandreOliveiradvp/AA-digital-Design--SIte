@@ -44,6 +44,30 @@
             </div>
         </div>
     </section>
+    <section class="services pt-5">
+        <div class="container-default">
+            <div class="row m-0">
+                <div class="col-12 text-center">
+                    <h2>Nossos Serviços</h2>
+                </div>
+                <div class="col-12 text-center">
+                    <p class="mx-auto mt-3 service-about">Desenvolvemos conteúdos profissionais com base nas melhores tendências do mercado atual e proporcionamos produtos que valorizam e fortalecem e presença digital de nossos clientes.
+                        Confira abaixo os tipos de serviços que podemos proporcionar. </p>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-4">
+                    <div class="card card-custom">
+                        <h3>Social Mídia</h3>
+                        <p>Cuidamos da sua rede social visando o crescimento da marca. Trabalhamos valorizando a apresentação da sua marca, o aumento de seus seguidores e a conversão de seus seguidores em ações de venda.
+                        Trabalhamos também dando total apoio ao seu negócio, respondendo e dando feedback das solicitações dos seus clientes no ambiente das redes sociais.</p>
+                    </div>
+                </div>
+                <div class="col-4">2</div>
+                <div class="col-4">3</div>
+            </div>
+        </div>
+    </section>
 </body>
 
 </html>

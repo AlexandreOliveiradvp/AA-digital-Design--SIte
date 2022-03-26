@@ -8,7 +8,8 @@ section.start{
     width: 100%;
     height: 100vh;
     background-image: url("../img/WallpapperSectionStart.jpg");
-    background-position: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
     z-index: 1;
 }
@@ -59,7 +60,7 @@ div.content div.content-text h1{
 div.content div.content-text .btn-custom{
     color: #E6E6E6;
     border: 2px solid #E6E6E6;
-    margin-top: 40px;
+    margin-top: 70px;
     transition: 600ms;
 }
 div.content div.content-text .btn-custom:hover{
@@ -77,4 +78,33 @@ div.content div.content-text img{
 div.content div.content-text img:hover{
     transform: scale(1.1);
     transition: 600ms;
+}
+section.services{
+    width: 100%;
+    background-color: rgba(92, 95, 181,0.2);
+}
+section.services h2{
+    color: #5C5FB5;
+}
+section.services p.service-about{
+    color: #3A3D85;
+    width: 700px;
+    font-size: 1rem;
+}
+section.services .card-custom{
+    padding: 10px 10px;
+}
+
+@media only screen and (min-width: 1600px){
+    div.container-default{
+        width: 1440px;
+        margin: 0 auto;
+    }
+    div.content div.content-text{
+        padding-top: 70px;
+    }
+    div.content div.content-text h1{
+        margin-top: 200px;
+        font-size: 2.3rem;
+    }
 }

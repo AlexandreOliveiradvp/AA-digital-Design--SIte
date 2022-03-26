@@ -82,9 +82,13 @@ div.content div.content-text img:hover{
 section.services{
     width: 100%;
     background-color: rgba(92, 95, 181,0.2);
+    padding-bottom: 60px;
 }
 section.services h2{
     color: #5C5FB5;
+    font-weight: bold;
+    font-size: 2.3rem;
+    letter-spacing: 2px;
 }
 section.services p.service-about{
     color: #3A3D85;
@@ -92,9 +96,47 @@ section.services p.service-about{
     font-size: 1rem;
 }
 section.services .card-custom{
-    padding: 10px 10px;
+    padding: 15px 25px;
+    display: flex;
+    -webkit-box-shadow: 5px 5px 6px -4px rgba(0,0,0,0.42); 
+    box-shadow: 5px 5px 6px -4px rgba(0,0,0,0.42);;
 }
-
+section.services .card-custom i{
+    font-size: 3rem;
+    color: #5C5FB5;
+}
+section.services .card-custom h3.social-media{
+    font-size: 1.9rem;
+    padding-top: 5px;
+    margin-left: -15px;
+    font-style: italic;
+    color: #3A3D85;
+}
+section.services .card-custom h3.digital-design{
+    font-size: 1.9rem;
+    padding-top: 5px;
+    margin-left: -25px;
+    font-style: italic;
+    color: #3A3D85;
+}
+section.services .card-custom h3.development{
+    font-size: 1.9rem;
+    padding-top: 5px;
+    padding-left: 20px;
+    font-style: italic;
+    color: #3A3D85;
+}
+section.services .card-custom p.description{
+    color: #3A3D85;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    line-height: 20px;
+}
+section.portfolio{
+    background-color: white;
+    width: 100%;
+    height: 1000px;
+}
 @media only screen and (min-width: 1600px){
     div.container-default{
         width: 1440px;

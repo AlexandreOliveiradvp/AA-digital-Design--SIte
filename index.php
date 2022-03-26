@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -55,18 +57,59 @@
                         Confira abaixo os tipos de serviços que podemos proporcionar. </p>
                 </div>
             </div>
-            <div class="row m-0">
+            <div class="row m-0 pt-5">
                 <div class="col-4">
                     <div class="card card-custom">
-                        <h3>Social Mídia</h3>
-                        <p>Cuidamos da sua rede social visando o crescimento da marca. Trabalhamos valorizando a apresentação da sua marca, o aumento de seus seguidores e a conversão de seus seguidores em ações de venda.
-                        Trabalhamos também dando total apoio ao seu negócio, respondendo e dando feedback das solicitações dos seus clientes no ambiente das redes sociais.</p>
+                        <div class="col-12 d-flex">
+                            <div class="col-4">
+                                <i class="fas fa-hashtag"></i>
+                            </div>
+                            <div class="col-8">
+                                <h3 class="social-media">Social Mídia</h3>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p class="description">Cuidamos da sua rede social visando o crescimento da marca. Trabalhamos valorizando a apresentação da sua marca, o aumento de seus seguidores e a conversão de seus seguidores em ações de venda.
+                                Trabalhamos também dando total apoio ao seu negócio, respondendo e dando feedback das solicitações dos seus clientes no ambiente das redes sociais.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-4">2</div>
-                <div class="col-4">3</div>
+                <div class="col-4">
+                <div class="card card-custom">
+                        <div class="col-12 d-flex">
+                            <div class="col-4">
+                                <i class="fas fa-drafting-compass"></i>
+                            </div>
+                            <div class="col-8">
+                                <h3 class="digital-design">Digital Design</h3>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p class="description">Cuidamos da sua rede social visando o crescimento da marca. Trabalhamos valorizando a apresentação da sua marca, o aumento de seus seguidores e a conversão de seus seguidores em ações de venda.
+                                Trabalhamos também dando total apoio ao seu negócio, respondendo e dando feedback das solicitações dos seus clientes no ambiente das redes sociais.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                <div class="card card-custom">
+                        <div class="col-12 d-flex">
+                            <div class="col-2">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="col-10">
+                                <h3 class="development">Desenvolvimento</h3>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-3">
+                            <p class="description">Cuidamos da sua rede social visando o crescimento da marca. Trabalhamos valorizando a apresentação da sua marca, o aumento de seus seguidores e a conversão de seus seguidores em ações de venda.
+                                Trabalhamos também dando total apoio ao seu negócio, respondendo e dando feedback das solicitações dos seus clientes no ambiente das redes sociais.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
+    <section class="portfolio">
     </section>
 </body>
 

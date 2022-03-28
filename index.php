@@ -85,8 +85,8 @@
                             </div>
                         </div>
                         <div class="col-12 mt-3">
-                            <p class="description">Cuidamos da sua rede social visando o crescimento da marca. Trabalhamos valorizando a apresentação da sua marca, o aumento de seus seguidores e a conversão de seus seguidores em ações de venda.
-                                Trabalhamos também dando total apoio ao seu negócio, respondendo e dando feedback das solicitações dos seus clientes no ambiente das redes sociais.</p>
+                            <p class="description">Desenvolvemos peças gráficas seguido as melhores tendências do mercado de design digital.Nos dedicamos a criar artes inovadoras e totalmente profissionais.
+                        Desenvolvemos Logos para marcas, peças gráficas e prototipagem para sites e artes para suas redes socias.</p>
                         </div>
                     </div>
                 </div>
@@ -101,8 +101,8 @@
                             </div>
                         </div>
                         <div class="col-12 mt-3">
-                            <p class="description">Cuidamos da sua rede social visando o crescimento da marca. Trabalhamos valorizando a apresentação da sua marca, o aumento de seus seguidores e a conversão de seus seguidores em ações de venda.
-                                Trabalhamos também dando total apoio ao seu negócio, respondendo e dando feedback das solicitações dos seus clientes no ambiente das redes sociais.</p>
+                            <p class="description">Desenvolvemos todos os tipos de sites e trabalhamos com uma variedade de plataformas e tecnologias afim de poder aplicar a mais adequada para o seu projeto.
+                        Desenvolvemos também sistemas para lojas virtuais onde nossos clientes possam vender seus produtos com eficácia e segurança. </p>
                         </div>
                     </div>
                 </div>

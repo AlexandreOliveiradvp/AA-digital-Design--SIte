@@ -17,7 +17,8 @@ app.use(express.static('./'))
 
 //Rotas
 app.get('/', function(req, res) {
-    res.render('home')
+    const portfolio = ['Site Aliança Portuguesa', 'Site Paz do Vale', 'E-commerce Fábrica de Sintéticos', 'Social Mídia Royal Kllumm', 'Social Mídia Space lanches', 'Design de Logos']
+    res.render('home',{portfolio: portfolio})
 })
 
 app.listen(port, function() {

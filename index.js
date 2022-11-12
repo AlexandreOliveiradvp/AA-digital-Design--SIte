@@ -22,7 +22,7 @@ app.get('/', function(req, res) {
     res.render('home',{portfolio: portfolio , titlePage: titlePage})
 })
 
-app.get('/portfolio', function(req, res) {
+app.get('/portifolio', function(req, res) {
     const titlePage = 'Portifólio'
     res.render('portfolio',{titlePage: titlePage})
 })

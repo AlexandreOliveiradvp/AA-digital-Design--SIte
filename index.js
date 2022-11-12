@@ -17,8 +17,14 @@ app.use(express.static('./'))
 
 //Rotas
 app.get('/', function(req, res) {
-    const portfolio = ['Site Aliança Portuguesa', 'Site Paz do Vale', 'E-commerce Fábrica de Sintéticos', 'Social Mídia Royal Kllumm', 'Social Mídia Space lanches', 'Design de Logos']
-    res.render('home',{portfolio: portfolio})
+    const portfolio = ['Site Aliança Portuguesa', 'Edifica Representações', 'E-commerce Fábrica de Sintéticos', 'Social Mídia Royal Kllumm', 'Social Mídia Space lanches', 'Design de Logos']
+    const titlePage = 'Home'
+    res.render('home',{portfolio: portfolio , titlePage: titlePage})
+})
+
+app.get('/portfolio', function(req, res) {
+    const titlePage = 'Portifólio'
+    res.render('portfolio',{titlePage: titlePage})
 })
 
 app.listen(port, function() {

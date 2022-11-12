@@ -63,13 +63,6 @@ div.content div.content-text .btn-custom:hover{
     color: white;
     transform: scale(1.1);
 }
-div.content div.content-text img{
-    width: 75px;
-    position: fixed;
-    bottom: 15px;
-    right: 25px;
-    cursor: pointer;
-}
 div.content div.content-text img:hover{
     transform: scale(1.1);
     transition: 600ms;

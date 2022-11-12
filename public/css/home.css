@@ -100,7 +100,16 @@ section.our-team .wrap-team {
     height: 400px;
     background-color: #DDD;
     margin-top: 20px;
-    border-radius: 7px;
+    border-radius: 5px;
+}
+section.our-team .wrap-name {
+    width: 450px;
+} 
+section.our-team .wrap-name h5 {
+    color: #3A3D85;
+    letter-spacing: 1.3px;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
 
 @media only screen and (min-width: 1600px){

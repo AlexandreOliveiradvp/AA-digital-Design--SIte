@@ -12,6 +12,31 @@
 
 <body>
     {{{body}}}
+    <footer>
+        <div class="container-default">
+            <div class="row">
+                <div class="col"><img src="public/img/Logo AA Digital Design.png" alt="Logo_AA_Digital_Design"
+                        class="logo-footer"></div>
+                <div class="col text-center pt-4">
+                    <h6>Contato</h6>
+                    <span>Email: </span><span>contato@aadigitaldesign.com.br</span>
+                    <br>
+                    <span>Telefone: </span><span>(21)96700-4070 / (21)96444-8046</span>
+                </div>
+                <div class="col text-end">
+                    <svg class="bi icon-footer">
+                        <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#whatsapp" />
+                    </svg>
+                    <svg class="bi icon-footer">
+                        <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#instagram" />
+                    </svg>
+                    <svg class="bi icon-footer">
+                        <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#facebook" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
@@ -28,4 +53,34 @@
         width: 1080px;
         margin: 0 auto;
     }
+
+    footer {
+        background-color: #E7EAF3;
+        max-height: 120px;
+    }
+
+    footer .logo-footer {
+        width: 250px;
+        height: 100px;
+        cursor: pointer;
+    }
+
+    footer h6 {
+        color: #3A3D85;
+    }
+
+    footer span {
+        font-size: 0.9rem;
+        font-weight: 300;
+        color: #3A3D85;
+    }
+
+    footer .icon-footer {
+        width: 32px;
+        height: 40px;
+        fill: #3A3D85;
+        margin: 30px 5px 5px 0;
+        cursor: pointer;
+    }
+
 </style>

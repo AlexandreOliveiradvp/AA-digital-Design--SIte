@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="public/img/favicon.ico">
+    {{!-- AOS --}}
+    <link href="node_modules/aos/dist/aos.css" rel="stylesheet">
+    <script src="node_modules/aos/dist/aos.js"></script>
     {{!-- Import bootstrap css --}}
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <title>AA Digital Design - {{titlePage}}</title>
@@ -16,13 +19,13 @@
 
     {{!-- Import button Whatsapp --}}
     {{> components/buttonWhatsapp}}
-    
+
     {{!-- Footer default --}}
     <footer>
         <div class="container-default">
             <div class="row">
-                <div class="col"><img src="public/img/logoroxo.png" alt="Logo_AA_Digital_Design"
-                        class="logo-footer"></div>
+                <div class="col"><img src="public/img/logoroxo.png" alt="Logo_AA_Digital_Design" class="logo-footer">
+                </div>
                 <div class="col text-center pt-4">
                     <h6>Contato</h6>
                     <span>Email: </span><span>contato@aadigitaldesign.com.br</span>
@@ -44,7 +47,6 @@
         </div>
     </footer>
 </body>
-
 </html>
 
 <style>
@@ -88,5 +90,4 @@
         margin: 30px 5px 5px 0;
         cursor: pointer;
     }
-
 </style>

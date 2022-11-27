@@ -3,16 +3,31 @@
     <div class="mask">
         <header>
             <div class="container-default">
-                <div class="row pt-4">
-                    <div class="col" data-aos="fade-right" data-aos-duration="1000">
-                        <img src="public/img/Logo AA Digital Design.png" alt="Logo_AA_Digital_Design">
+                <div class="row pt-4 wrap-logo-menu">
+                    <div class="col wrap-logo" data-aos="fade-right" data-aos-duration="1000">
+                        <a href="/"><img src="public/img/Logo AA Digital Design.png" alt="Logo_AA_Digital_Design"></a>
                     </div>
-                    <div class="col" data-aos="fade-left" data-aos-duration="1000">
-                        <nav class="nav float-end">
+                    <div class="col wrap-menu" data-aos="fade-left" data-aos-duration="1000">
+                        {{!-- Menu desktop --}}
+                        <nav class="nav float-end menu-desktop">
                             <a class="nav-link text-white nav-header-home" aria-current="page" href="/">Home</a>
                             <a class="nav-link text-white nav-header-home" href="#services">Serviços</a>
                             <a class="nav-link text-white nav-header-home" href="/portifolio">Portifólio</a>
                             <a class="nav-link text-white nav-header-home" href="#">Contato</a>
+                        </nav>
+                        {{!-- Menu Mobile --}}
+                        <div class="button-menu-mobile" onclick="showMenu()">
+                            <svg class="bi icon">
+                                <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#list" />
+                            </svg>
+                        </div>
+                        <nav class="menu-mobile" id="menuMobile">
+                            <ul>
+                                <li>Home</li>
+                                <li>Serviços</li>
+                                <li>Portifólio</li>
+                                <li>Contato</li>
+                            </ul>
                         </nav>
                     </div>
                 </div>
@@ -20,14 +35,30 @@
         </header>
         <div class="content">
             <div class="container-default">
-                <div class="content-text">
-                    <h1 data-aos="fade-right" data-aos-duration="1000">O Lugar certo para desenvolver a sua identidade no mundo digital.</h1>
-                    <button class="btn btn-custom btn-lg" data-aos="fade-right" data-aos-duration="1000">Fale Agora Conosco</button>
+                <div class="content-text" id="mainText">
+                    <h1 data-aos="fade-right" data-aos-duration="1000">O Lugar certo para desenvolver a sua identidade
+                        no mundo digital.</h1>
+                    <button class="btn btn-custom btn-lg" data-aos="fade-right" data-aos-duration="1000">Fale Agora
+                        Conosco</button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <script>
-    AOS.init();
+    let menuMobile = document.getElementById("menuMobile");
+    let mainText = document.getElementById("mainText")
+    let controlStatus = false;
+    function showMenu() {
+        if (controlStatus == false) {
+            menuMobile.style.display = 'block'
+            mainText.style.marginTop = '110px'
+            controlStatus = true;
+        } else {
+            menuMobile.style.display = 'none'
+            mainText.style.marginTop = '0px'
+            controlStatus = false
+
+        }
+    }
 </script>

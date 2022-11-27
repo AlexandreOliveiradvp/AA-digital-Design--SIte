@@ -1,80 +1,101 @@
-section.services{
+section.services {
     width: 100%;
-    background-color: rgba(92, 95, 181,0.2);
+    background-color: rgba(92, 95, 181, 0.2);
     padding-bottom: 60px;
 }
-h2.title-section{
+
+h2.title-section {
     color: #5C5FB5;
     font-weight: 600;
     font-size: 2.1rem;
     letter-spacing: 2px;
 }
-section.services p.service-about{
+
+section.services p.service-about {
     color: #3A3D85;
     width: 700px;
     font-size: 1rem;
     letter-spacing: 1px;
     line-height: 20px;
 }
-.card-custom{
+
+.card-custom {
     padding: 15px 25px;
     display: flex;
     height: 340px;
-    -webkit-box-shadow: 5px 5px 6px -4px rgba(0,0,0,0.42); 
-    box-shadow: 5px 5px 6px -4px rgba(0,0,0,0.42);;
+    -webkit-box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
+    box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
+    cursor: default;
 }
-.title-card{
+
+.card-services:hover {
+    transition: 600ms;
+    -webkit-box-shadow: 15px 15px 16px -4px rgba(0, 0, 0, 0.60);
+    box-shadow: 18px 18px 19px -4px rgba(0, 0, 0, 0.60);
+}
+
+.title-card {
     font-size: 1.9rem;
     padding-top: 5px;
     font-style: italic;
     color: #3A3D85;
 }
-.card-custom p.description{
+
+.card-custom p.description {
     color: #3A3D85;
     font-size: 0.9rem;
     letter-spacing: 0.8px;
     line-height: 20px;
     font-style: italic;
 }
+
 .card-custom .icon_hash {
     width: 43px;
     height: 43px;
     fill: #3A3D85;
 }
+
 .card-custom .icon {
     width: 43px;
     height: 43px;
     fill: #3A3D85;
 }
-section.portfolio{
+
+section.portfolio {
     background-color: white;
     width: 100%;
     height: 1000px;
 }
+
 section.portfolio .container-img-portfolio {
     border: #5C5FB5 solid 2px;
     height: 300px !important;
 }
+
 h4.title-portfolio {
     font-size: 1.2rem;
     letter-spacing: 1.5px;
     color: #3A3D85;
 }
+
 button.btn-custom-portfolio {
     background-color: #5C5FB5;
     color: white;
     transition: 0.5s;
 }
+
 button.btn-custom-portfolio:hover {
     background-color: #3A3D85;
     color: white;
     transform: scale(1.1);
     transition: 0.5s;
 }
+
 button.btn-custom-portfolio:active {
     background-color: #24265f !important;
     color: white !important;
 }
+
 section.depoiment .wrap-depoiment {
     width: 90px;
     height: 90px;
@@ -83,11 +104,13 @@ section.depoiment .wrap-depoiment {
     margin: 0 auto;
     margin-top: 55px;
 }
+
 section.depoiment h4 {
     font-size: 1.2rem;
     letter-spacing: 1.5px;
     color: #3A3D85;
 }
+
 section.depoiment p {
     color: #3A3D85;
     font-size: 0.9rem;
@@ -95,6 +118,7 @@ section.depoiment p {
     line-height: 20px;
     font-style: italic;
 }
+
 section.our-team .wrap-team {
     width: 450px;
     height: 400px;
@@ -102,9 +126,11 @@ section.our-team .wrap-team {
     margin-top: 20px;
     border-radius: 5px;
 }
+
 section.our-team .wrap-name {
     width: 450px;
-} 
+}
+
 section.our-team .wrap-name h5 {
     color: #3A3D85;
     letter-spacing: 1.3px;
@@ -112,19 +138,43 @@ section.our-team .wrap-name h5 {
     font-weight: 700;
 }
 
-@media only screen and (min-width: 1600px){
-    div.container-default{
+/* Desktop Styles > 1600px */
+@media only screen and (min-width: 1600px) {
+    div.container-default {
         width: 1440px;
         margin: 0 auto;
     }
-    div.content div.content-text{
+
+    div.content div.content-text {
         padding-top: 70px;
     }
-    div.content div.content-text h1{
+
+    div.content div.content-text h1 {
         margin-top: 200px;
         font-size: 2.3rem;
     }
-    section.services .card-custom{
+
+    section.services .card-custom {
         height: 280px;
+    }
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
+    p.service-about {
+        width: 100% !important;
+    }
+
+    div.wrap-services-mobile {
+        display: block;
+    }
+
+    div.card-services {
+        margin-top: 30px;
+    }
+
+    div.card-services:hover {
+        -webkit-box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
+        box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
     }
 }

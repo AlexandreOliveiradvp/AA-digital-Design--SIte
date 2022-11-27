@@ -19,33 +19,40 @@
             <form>
                 <div class="mb-3">
                     <label for="nameInput" class="form-label label-subtitle">Nome</label>
-                    <input type="text" class="form-control" id="nameInput">
+                    <input type="text" class="form-control" id="inputName">
                     <div class="invalid-feedback">
-                        uuuuuuuuuuuuuu
+                        Campo Obrigatório.
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label label-subtitle">Email</label>
-                    <input type="email" class="form-control" id="exampleInputPassword1">
+                    <input type="email" class="form-control" id="inputEmail">
+                    <div class="invalid-feedback">
+                        Campo Obrigatório.
+                    </div>
                 </div>
                 <div class="row">
+                    <label class="form-label label-subtitle">Assunto</label>
                     <div class="col-3">
-                        <input type="radio" class="form-check-input" name="assunto">
+                        <input type="radio" class="form-check-input" name="assunto" checked value="design">
                         <label class="form-check-label label-radio">Design</label>
                     </div>
                     <div class="col-4">
-                        <input type="radio" class="form-check-input" name="assunto">
+                        <input type="radio" class="form-check-input" name="assunto" value="social-media">
                         <label class="form-check-label label-radio">Social Mídia</label>
                     </div>
                     <div class="col-5">
-                        <input type="radio" class="form-check-input" name="assunto">
+                        <input type="radio" class="form-check-input" name="assunto" value="desenvolvimento">
                         <label class="form-check-label label-radio">Desenvolvimento</label>
                     </div>
                 </div>
                 <div class="row">
                     <label class="pt-4 label-subtitle">Menssagem</label>
                     <div class="form-floating">
-                        <textarea class="form-control pt-4"></textarea>
+                        <textarea class="form-control" id="inputMassage"></textarea>
+                        <div class="invalid-feedback">
+                            Campo Obrigatório.
+                        </div>
                     </div>
                 </div>
                 <button onclick="submitForm()" class="btn btn-submit-custom mt-4 mb-5">Enviar</button>
@@ -55,8 +62,32 @@
 </section>
 
 <script>
+    let inputName = document.getElementById("inputName");
+    let inputEmail = document.getElementById("inputEmail");
+    let inputMassage = document.getElementById("inputMassage");
     function submitForm() {
         event.preventDefault();
-        console.log(document.getElementById("inputName").value)
+        if (inputName.value == '' || inputEmail.value == '' || inputMassage.value == '') {
+            if (inputName.value == '') {
+                inputName.classList.add('is-invalid');
+            }
+            if (inputEmail.value == '') {
+                inputEmail.classList.add('is-invalid');
+            }
+            if (inputMassage.value == '') {
+                inputMassage.classList.add('is-invalid');
+            }
+        } else {
+            console.log(this.inputName.value, this.inputEmail.value, this.inputMassage.value);
+        }
     }
+    inputName.addEventListener('change', function (e) {
+        inputName.classList.remove('is-invalid');
+    })
+    inputEmail.addEventListener('change', function (e) {
+        inputEmail.classList.remove('is-invalid');
+    })
+    inputMassage.addEventListener('change', function (e) {
+        inputMassage.classList.remove('is-invalid');
+    })
 </script>

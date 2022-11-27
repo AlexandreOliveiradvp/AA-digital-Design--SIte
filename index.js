@@ -27,6 +27,11 @@ app.get('/portifolio', function(req, res) {
     res.render('portfolio',{titlePage: titlePage})
 })
 
+app.get('/contato', function(req, res) {
+    const titlePage = 'Contato'
+    res.render('contact', {titlePage: titlePage})
+})
+
 app.listen(port, function() {
     console.log(`Server running on port ${port}`)
 })

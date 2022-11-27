@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="public/css/contact.css">
+{{!-- Import header default --}}
+{{> headerDefault}}
+<section class="contact">
+    <div class="row">
+        <div class="col text-center pt-4">
+            <h1>Fale Conosco</h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-6 text-center pt-4">
+            <p class="contact-paragraph">Se deseja falar conosco, preencha o formulário abaixo.
+                Fique a vontade para fazer perguntas sobre nossos serviços, pedir informações sobre orçamento e etc.
+                Ficaremos felizes em lhe responder.</p>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-4">
+            <form>
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label label-subtitle">Nome</label>
+                    <input type="text" class="form-control" id="nameInput">
+                    <div class="invalid-feedback">
+                        uuuuuuuuuuuuuu
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label label-subtitle">Email</label>
+                    <input type="email" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <input type="radio" class="form-check-input" name="assunto">
+                        <label class="form-check-label label-radio">Design</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="radio" class="form-check-input" name="assunto">
+                        <label class="form-check-label label-radio">Social Mídia</label>
+                    </div>
+                    <div class="col-5">
+                        <input type="radio" class="form-check-input" name="assunto">
+                        <label class="form-check-label label-radio">Desenvolvimento</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="pt-4 label-subtitle">Menssagem</label>
+                    <div class="form-floating">
+                        <textarea class="form-control pt-4"></textarea>
+                    </div>
+                </div>
+                <button onclick="submitForm()" class="btn btn-submit-custom mt-4 mb-5">Enviar</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script>
+    function submitForm() {
+        event.preventDefault();
+        console.log(document.getElementById("inputName").value)
+    }
+</script>

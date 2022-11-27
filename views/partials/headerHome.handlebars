@@ -18,7 +18,7 @@
                         {{!-- Menu Mobile --}}
                         <div class="button-menu-mobile" onclick="showMenu()">
                             <svg class="bi icon">
-                                <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#list" />
+                                <use id="iconMenu" xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#list" />
                             </svg>
                         </div>
                         <nav class="menu-mobile" id="menuMobile">
@@ -46,19 +46,21 @@
     </div>
 </section>
 <script>
-    let menuMobile = document.getElementById("menuMobile");
-    let mainText = document.getElementById("mainText")
+    const menuMobile = document.getElementById("menuMobile");
+    const mainText = document.getElementById("mainText");
+    const iconMenu = document.getElementById("iconMenu");
     let controlStatus = false;
     function showMenu() {
         if (controlStatus == false) {
             menuMobile.style.display = 'block'
-            mainText.style.marginTop = '110px'
+            mainText.style.marginTop = '45px'
+            iconMenu.href.baseVal  = "node_modules/bootstrap-icons/bootstrap-icons.svg#x"
             controlStatus = true;
         } else {
             menuMobile.style.display = 'none'
             mainText.style.marginTop = '0px'
+            iconMenu.href.baseVal  = "node_modules/bootstrap-icons/bootstrap-icons.svg#list"
             controlStatus = false
-
         }
     }
 </script>

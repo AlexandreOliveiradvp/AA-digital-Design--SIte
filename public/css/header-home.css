@@ -92,6 +92,7 @@ div.button-menu-mobile {
         width: 40px;
         height: 40px;
         margin: 0 auto;
+        margin-top: 20px;
         border: 2px solid rgba(255, 255, 255, 0.45);
         cursor: pointer;
         border-radius: 5px;
@@ -105,7 +106,8 @@ div.button-menu-mobile {
     nav.menu-mobile {
         text-align: center;
         transition: 500ms;
-        margin-top: 5px;
+        margin-top: 10px;
+        border-top: #e6e6e62d 1px solid;
         display: none;
     }
     nav.menu-mobile ul {
@@ -119,9 +121,11 @@ div.button-menu-mobile {
         border-bottom: #e6e6e62d 1px solid;
         padding: 3px 3px;
         cursor: pointer;
+        transition: 350ms;
     }
     nav.menu-mobile ul li:hover {
         background-color: #2a333d94;
+        transition: 350ms;
     }
     div.content-text {
         width: 100% !important;

@@ -4,7 +4,7 @@ const port = 3000
 
 const app = express()
 
-//Função de invocação dos partials
+//Partial invocation function
 const hbs = exphbs.create({
     partialsDir: ['views/partials']
 })
@@ -12,10 +12,10 @@ const hbs = exphbs.create({
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 
-//Definindo raiz padrão para importação de arquivos estáticos 
+//Setting default root for importing static files
 app.use(express.static('./'))
 
-//Rotas
+//Routes
 app.get('/', function(req, res) {
     const portfolio = ['Site Aliança Portuguesa', 'Edifica Representações', 'E-commerce Fábrica de Sintéticos', 'Social Mídia Royal Kllumm', 'Social Mídia Space lanches', 'Design de Logos']
     const titlePage = 'Home'

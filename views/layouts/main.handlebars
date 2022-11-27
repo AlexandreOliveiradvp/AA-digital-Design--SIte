@@ -22,8 +22,8 @@
     {{!-- Footer default --}}
     <footer>
         <div class="container-default">
-            <div class="row">
-                <div class="col">
+            <div class="row d-block-mobile-footer">
+                <div class="col text-center-footer-mobile">
                     <a href="/"><img src="public/img/logoroxo.png" alt="Logo_AA_Digital_Design" class="logo-footer"></a>
                 </div>
                 <div class="col text-center pt-4">
@@ -32,7 +32,7 @@
                     <br>
                     <span>Telefone: </span><span>(21)96700-4070 / (21)96444-8046</span>
                 </div>
-                <div class="col text-end">
+                <div class="col text-end text-center-footer-mobile">
                     <svg class="bi icon-footer">
                         <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#whatsapp" />
                     </svg>
@@ -62,33 +62,27 @@
         box-sizing: border-box;
         font-family: 'Lato', sans-serif;
     }
-
     div.container-default {
         width: 1080px;
         margin: 0 auto;
     }
-
     footer {
         background-color: #E7EAF3;
         max-height: 120px;
     }
-
     footer .logo-footer {
         width: 250px;
         height: 100px;
         cursor: pointer;
     }
-
     footer h6 {
         color: #3A3D85;
     }
-
     footer span {
         font-size: 0.9rem;
         font-weight: 300;
         color: #3A3D85;
     }
-
     footer .icon-footer {
         width: 32px;
         height: 40px;
@@ -96,11 +90,22 @@
         margin: 30px 5px 5px 0;
         cursor: pointer;
     }
-
     @media only screen and (max-width: 500px) {
         .container-default {
             width: 100% !important;
             margin: 0;
+        }
+        footer {
+            max-height: 280px !important;
+        }
+        div.d-block-mobile-footer {
+            display: block;
+        }
+        div.text-center-footer-mobile {
+            text-align: center !important;
+        }
+        div.text-center-footer-mobile svg {
+            margin: 20px 0 0 0 !important;
         }
     }
 </style>

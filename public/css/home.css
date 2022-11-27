@@ -167,16 +167,13 @@ section.our-team .wrap-name h5 {
     p.service-about {
         width: 100% !important;
     }
-
     div.wrap-services-mobile {
         display: block;
     }
-
     div.card-services {
         margin-top: 30px;
         max-height: 260px;
     }
-
     div.card-services:hover {
         -webkit-box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
         box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);

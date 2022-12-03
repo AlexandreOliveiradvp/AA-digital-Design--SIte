@@ -1,15 +1,17 @@
 import nodemailer from "nodemailer"
+import * as dotenv from 'dotenv'
+
+dotenv.config()
 
 async function formSendMail(name, email, subject, message) {
-    let response
     if (name && email && subject && message != undefined) {
         let transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
             port: 587,
             secure: false,
             auth: {
-                user: "alexandreolitec@gmail.com",
-                pass: "xcnxojloesnqmtrb",
+                user: process.env.USRAPP_GMAIL,
+                pass: process.env.PSWAPP_GMAIL,
             },
         });
 

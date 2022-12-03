@@ -22,3 +22,9 @@ section.contact .btn-submit-custom {
     width: 100%;
     border-radius: 3px !important;
 }
+@media screen and (max-width: 520px) {
+    .mobile-w-100{
+        width: 100%;
+        padding: 0px 30px 0 30px;
+    }
+}

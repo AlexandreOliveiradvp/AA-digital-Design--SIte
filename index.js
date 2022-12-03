@@ -1,5 +1,6 @@
 import express from "express"
 import exphbs from "express-handlebars"
+import formSendMail from "./mail/mail.js"
 const port = 3000
 
 const app = express()
@@ -13,10 +14,10 @@ app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
 
 //Enable Json
-/* app.use(express.urlencoded({
+app.use(express.urlencoded({
     extended: true
 }))
-app.use(express.json()) */
+app.use(express.json())
 
 //Setting default root for importing static files
 app.use(express.static('./'))
@@ -34,8 +35,6 @@ app.get('/portifolio', function (req, res) {
 })
 
 app.get('/contato', function (req, res) {
-    const notification = req.params.notif
-    console.log(notification)
     const titlePage = 'Contato'
     res.render('contact', { titlePage: titlePage })
 })
@@ -46,12 +45,12 @@ app.post('/submit', function (req, res) {
         const email = req.body.email
         const subject = req.body.subject
         const massage = req.body.massage
-        console.log(name, email, subject, massage)
-        let notificationTrue = true
-        res.render('contact', {notificationTrue: notificationTrue})
+        formSendMail(name, email, subject, massage)
+        let notificationSuccess = true
+        res.render('contact', {notificationSuccess: notificationSuccess})
     } catch (e) {
-        let notificationFalse = true
-        res.render('contact', {notificationFalse: notificationFalse})
+        let notificationDanied = true
+        res.render('contact', {notificationDanied: notificationDanied})
         console.log("ERROR")
     }
 })

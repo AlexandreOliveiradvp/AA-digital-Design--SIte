@@ -8,14 +8,14 @@
         </div>
     </div>
     <div class="row d-flex justify-content-center">
-        <div class="col-6 text-center pt-4">
+        <div class="col-6 text-center pt-4 mobile-w-100">
             <p class="contact-paragraph">Se deseja falar conosco, preencha o formulário abaixo.
                 Fique a vontade para fazer perguntas sobre nossos serviços, pedir informações sobre orçamento e etc.
                 Ficaremos felizes em lhe responder.</p>
         </div>
     </div>
     <div class="row d-flex justify-content-center">
-        <div class="col-4">
+        <div class="col-4 mobile-w-100">
             <form action="/submit" id="form" method="POST">
                 <div class="mb-3">
                     <label for="nameInput" class="form-label label-subtitle">Nome</label>
@@ -57,10 +57,10 @@
                 </div>
                 <button onclick="submitForm()" class="btn btn-submit-custom mt-4 mb-3">Enviar</button>
             </form>
-            {{#if notificationTrue}}
+            {{#if notificationSuccess}}
             {{> components/alertSuccess}}
             {{/if}}
-            {{#if notificationFalse}}
+            {{#if notificationDanied}}
             {{> components/alertDanger}}
             {{/if}}
         </div>

@@ -132,5 +132,8 @@ div.button-menu-mobile {
         padding: 60px 20px 0px 20px !important;
         transition: 500ms;
     }
+    nav.menu-mobile ul a {
+        text-decoration: none;
+    }
     
 }

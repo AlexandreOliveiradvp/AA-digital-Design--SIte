@@ -15,7 +15,7 @@
 - express-handlebars 6.0.6
 - nodemailer 6.8.0
 - nodemon 2.0.20
-- dotenv": 16.0.3
+- dotenv 16.0.3
 
 ## Project setup
 

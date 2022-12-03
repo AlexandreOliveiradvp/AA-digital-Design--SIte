@@ -1,0 +1,30 @@
+section.contact h1 {
+    color: #5C5FB5;
+    font-weight: 600;
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+}
+section.contact p.contact-paragraph {
+    font-size: 1rem;
+    color: #3A3D85;
+}
+section.contact label.label-subtitle {
+    font-size: 1.1rem;
+    color: #3A3D85;
+}
+section.contact label.label-radio {
+    font-size: 0.9rem;
+    color: #3A3D85;
+}
+section.contact .btn-submit-custom {
+    background-color: #3A3D85;
+    color: white;
+    width: 100%;
+    border-radius: 3px !important;
+}
+@media screen and (max-width: 520px) {
+    .mobile-w-100{
+        width: 100%;
+        padding: 0px 30px 0 30px;
+    }
+}

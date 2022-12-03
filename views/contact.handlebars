@@ -1,0 +1,101 @@
+<link rel="stylesheet" href="public/css/contact.css">
+{{!-- Import header default --}}
+{{> headerDefault}}
+<section class="contact">
+    <div class="row">
+        <div class="col text-center pt-4">
+            <h1>Fale Conosco</h1>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-6 text-center pt-4 mobile-w-100">
+            <p class="contact-paragraph">Se deseja falar conosco, preencha o formulário abaixo.
+                Fique a vontade para fazer perguntas sobre nossos serviços, pedir informações sobre orçamento e etc.
+                Ficaremos felizes em lhe responder.</p>
+        </div>
+    </div>
+    <div class="row d-flex justify-content-center">
+        <div class="col-4 mobile-w-100">
+            <form action="/submit" id="form" method="POST">
+                <div class="mb-3">
+                    <label for="nameInput" class="form-label label-subtitle">Nome</label>
+                    <input type="text" name="name" class="form-control" id="inputName">
+                    <div class="invalid-feedback">
+                        Campo Obrigatório.
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="inputEmail" class="form-label label-subtitle">Email</label>
+                    <input type="email" name="email" class="form-control" id="inputEmail">
+                    <div class="invalid-feedback">
+                        Campo Obrigatório.
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="form-label label-subtitle">Assunto</label>
+                    <div class="col-3">
+                        <input type="radio" class="form-check-input" name="subject" checked value="design">
+                        <label class="form-check-label label-radio">Design</label>
+                    </div>
+                    <div class="col-4">
+                        <input type="radio" class="form-check-input" name="subject" value="social-media">
+                        <label class="form-check-label label-radio">Social Mídia</label>
+                    </div>
+                    <div class="col-5">
+                        <input type="radio" class="form-check-input" name="subject" value="desenvolvimento">
+                        <label class="form-check-label label-radio">Desenvolvimento</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label class="pt-4 label-subtitle">Menssagem</label>
+                    <div class="form-floating">
+                        <textarea name="massage" class="form-control" id="inputMassage"></textarea>
+                        <div class="invalid-feedback">
+                            Campo Obrigatório.
+                        </div>
+                    </div>
+                </div>
+                <button onclick="submitForm()" class="btn btn-submit-custom mt-4 mb-3">Enviar</button>
+            </form>
+            {{#if notificationSuccess}}
+            {{> components/alertSuccess}}
+            {{/if}}
+            {{#if notificationDanied}}
+            {{> components/alertDanger}}
+            {{/if}}
+        </div>
+    </div>
+</section>
+
+<script>
+    const inputName = document.getElementById("inputName")
+    const inputEmail = document.getElementById("inputEmail")
+    const inputMassage = document.getElementById("inputMassage")
+    const form = document.getElementById("form")
+    function submitForm() {
+        event.preventDefault()
+        if (inputName.value == '' || inputEmail.value == '' || inputMassage.value == '') {
+            if (inputName.value == '') {
+                inputName.classList.add('is-invalid')
+            }
+            if (inputEmail.value == '') {
+                inputEmail.classList.add('is-invalid')
+            }
+            if (inputMassage.value == '') {
+                inputMassage.classList.add('is-invalid')
+            }
+        } else {
+            console.log(this.inputName.value, this.inputEmail.value, this.inputMassage.value)
+            form.submit()
+        }
+    }
+    inputName.addEventListener('change', function (e) {
+        inputName.classList.remove('is-invalid')
+    })
+    inputEmail.addEventListener('change', function (e) {
+        inputEmail.classList.remove('is-invalid')
+    })
+    inputMassage.addEventListener('change', function (e) {
+        inputMassage.classList.remove('is-invalid')
+    })
+</script>

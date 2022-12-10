@@ -34,22 +34,24 @@
                 <div class="row">
                     <label class="form-label label-subtitle">Assunto</label>
                     <div class="col-3">
-                        <input type="radio" class="form-check-input" name="subject" checked value="design">
+                        <input type="radio" class="form-check-input" name="subject" value="design" id="inputSubject">
                         <label class="form-check-label label-radio">Design</label>
                     </div>
                     <div class="col-4">
-                        <input type="radio" class="form-check-input" name="subject" value="social-media">
+                        <input type="radio" class="form-check-input" name="subject" value="social-media"
+                            id="inputSubject">
                         <label class="form-check-label label-radio">Social Mídia</label>
                     </div>
                     <div class="col-5">
-                        <input type="radio" class="form-check-input" name="subject" value="desenvolvimento">
+                        <input type="radio" class="form-check-input" name="subject" value="desenvolvimento"
+                            id="inputSubject">
                         <label class="form-check-label label-radio">Desenvolvimento</label>
                     </div>
                 </div>
                 <div class="row">
                     <label class="pt-4 label-subtitle">Menssagem</label>
                     <div class="form-floating">
-                        <textarea name="massage" class="form-control" id="inputMassage"></textarea>
+                        <textarea name="message" class="form-control" id="inputMessage"></textarea>
                         <div class="invalid-feedback">
                             Campo Obrigatório.
                         </div>
@@ -57,12 +59,13 @@
                 </div>
                 <button onclick="submitForm()" class="btn btn-submit-custom mt-4 mb-3">Enviar</button>
             </form>
-            {{#if notificationSuccess}}
-            {{> components/alertSuccess}}
-            {{/if}}
-            {{#if notificationDanied}}
-            {{> components/alertDanger}}
-            {{/if}}
+            {{!-- Alert request --}}
+            <div class="alert alert-success mt-1 alert-response-success-dnone" role="alert" id="alertSuccess">
+                Dados enviados com sucesso!
+            </div>
+            <div class="alert alert-danger mt-1 alert-response-danger-dnone" role="alert" id="alertDanger">
+                Falha ao enviar dados. Tente novamente mais tarde.
+            </div>
         </div>
     </div>
 </section>
@@ -70,23 +73,25 @@
 <script>
     const inputName = document.getElementById("inputName")
     const inputEmail = document.getElementById("inputEmail")
-    const inputMassage = document.getElementById("inputMassage")
-    const form = document.getElementById("form")
+    const inputSubject = document.getElementById("inputSubject")
+    const inputMessage = document.getElementById("inputMessage")
+    const alertSuccess = document.getElementById("alertSuccess")
+    const alertDanger = document.getElementById("alertDanger")
+
     function submitForm() {
         event.preventDefault()
-        if (inputName.value == '' || inputEmail.value == '' || inputMassage.value == '') {
+        if (inputName.value == '' || inputEmail.value == '' || inputMessage.value == '') {
             if (inputName.value == '') {
                 inputName.classList.add('is-invalid')
             }
             if (inputEmail.value == '') {
                 inputEmail.classList.add('is-invalid')
             }
-            if (inputMassage.value == '') {
-                inputMassage.classList.add('is-invalid')
+            if (inputMessage.value == '') {
+                inputMessage.classList.add('is-invalid')
             }
         } else {
-            console.log(this.inputName.value, this.inputEmail.value, this.inputMassage.value)
-            form.submit()
+            request(inputName.value, inputEmail.value, inputSubject.value, inputMessage.value)
         }
     }
     inputName.addEventListener('change', function (e) {
@@ -95,7 +100,36 @@
     inputEmail.addEventListener('change', function (e) {
         inputEmail.classList.remove('is-invalid')
     })
-    inputMassage.addEventListener('change', function (e) {
-        inputMassage.classList.remove('is-invalid')
+    inputMessage.addEventListener('change', function (e) {
+        inputMessage.classList.remove('is-invalid')
     })
+
+    function request(nameValue, emailValue, subjectValue, messageValue) {
+        let submitObj = {
+            "name": nameValue,
+            "email": emailValue,
+            "subject": subjectValue,
+            "message": messageValue
+        }
+        fetch('/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(submitObj),
+        }).then(response => {
+            if (!response.ok) {
+                throw Error(response.status)
+            }
+            return response.json();
+        }).then(response => {
+            console.log(response)
+            alertSuccess.classList.remove('alert-response-success-dnone')
+            alertSuccess.classList.add('d-block')
+        }).catch(e => {
+            alertDanger.classList.remove('alert-response-success-dnone')
+            alertDanger.classList.add('d-block')
+            console.log(e);
+        })
+    }
 </script>

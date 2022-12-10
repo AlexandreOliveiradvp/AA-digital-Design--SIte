@@ -22,6 +22,12 @@ section.contact .btn-submit-custom {
     width: 100%;
     border-radius: 3px !important;
 }
+.alert-response-success-dnone {
+    display: none;
+}
+.alert-response-danger-dnone {
+    display: none;
+}
 @media screen and (max-width: 520px) {
     .mobile-w-100{
         width: 100%;

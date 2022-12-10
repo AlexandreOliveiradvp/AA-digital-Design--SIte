@@ -40,20 +40,23 @@ app.get('/contato', function (req, res) {
     res.render('contact', { titlePage: titlePage })
 })
 
+/* app.get('/test', function (req, res) {
+    res.status(200).json({ message: "dsbhgvjhgsd" })
+}) */
+
 app.post('/submit', function (req, res) {
     try {
         const name = req.body.name
         const email = req.body.email
         const subject = req.body.subject
-        const massage = req.body.massage
-        formSendMail(name, email, subject, massage)
-        let notificationSuccess = true
-        res.render('contact', {notificationSuccess: notificationSuccess})
+        const message = req.body.message
+        console.log(name ,email, subject, message)
+        formSendMail(name, email, subject, message)
+        res.status(200).json({ data: "Dados recebidos com sucesso." })
     } catch (e) {
-        let notificationDanied = true
-        res.render('contact', {notificationDanied: notificationDanied})
+        res.status(400).json({ data: "Request failed." })
         console.log("ERROR")
-    }
+    } 
 })
 
 app.listen(port, function () {

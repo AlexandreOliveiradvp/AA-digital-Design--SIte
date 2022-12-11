@@ -25,7 +25,7 @@ async function formSendMail(name, email, subject, message) {
                     <p>Assunto: ${subject}</p>
                     <p>Mensagem: ${message}</p>`
         });
-        console.log("Message sent: %s", info.messageId, '\n', "Mensagem enviada com sucesso!");
+        await console.log("Message sent: %s", info.messageId, '\n', "Mensagem enviada com sucesso!");
     }
 }
 

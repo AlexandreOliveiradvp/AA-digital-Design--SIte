@@ -23,10 +23,18 @@
                         </div>
                         <nav class="menu-mobile" id="menuMobile">
                             <ul>
-                                <a href="/"><li>Home</li></a>
-                                <a href="#services"><li>Serviços</li></a>
-                                <a href="/portifolio"><li>Portifólio</li></a>
-                                <a href="/contato"><li>Contato</li></a>
+                                <a href="/">
+                                    <li>Home</li>
+                                </a>
+                                <a href="#services">
+                                    <li>Serviços</li>
+                                </a>
+                                <a href="/portifolio">
+                                    <li>Portifólio</li>
+                                </a>
+                                <a href="/contato">
+                                    <li>Contato</li>
+                                </a>
                             </ul>
                         </nav>
                     </div>
@@ -36,30 +44,32 @@
         <div class="content">
             <div class="container-default">
                 <div class="content-text" id="mainText">
-                    <h1 data-aos="fade-right" data-aos-duration="1000">O Lugar certo para desenvolver a sua identidade
-                        no mundo digital.</h1>
-                    <button class="btn btn-custom btn-lg" data-aos="fade-right" data-aos-duration="1000">Fale Agora
-                        Conosco</button>
+                    <h1 data-aos="fade-right" data-aos-duration="1000">
+                        O Lugar certo para desenvolver a sua identidade no mundo digital.
+                    </h1>
+                    <button class="btn btn-custom btn-lg" data-aos="fade-right" data-aos-duration="1000">
+                        Fale Agora Conosco
+                    </button>
                 </div>
             </div>
         </div>
     </div>
 </section>
 <script>
-    const menuMobile = document.getElementById("menuMobile");
-    const mainText = document.getElementById("mainText");
-    const iconMenu = document.getElementById("iconMenu");
-    let controlStatus = false;
+    const menuMobile = document.getElementById("menuMobile")
+    const mainText = document.getElementById("mainText")
+    const iconMenu = document.getElementById("iconMenu")
+    let controlStatus = false
     function showMenu() {
         if (controlStatus == false) {
             menuMobile.style.display = 'block'
             mainText.style.marginTop = '45px'
-            iconMenu.href.baseVal  = "node_modules/bootstrap-icons/bootstrap-icons.svg#x"
+            iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#x"
             controlStatus = true;
         } else {
             menuMobile.style.display = 'none'
             mainText.style.marginTop = '0px'
-            iconMenu.href.baseVal  = "node_modules/bootstrap-icons/bootstrap-icons.svg#list"
+            iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#list"
             controlStatus = false
         }
     }

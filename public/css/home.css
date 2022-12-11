@@ -172,7 +172,7 @@ section.our-team .wrap-name h5 {
     }
     div.card-services {
         margin-top: 30px;
-        max-height: 260px;
+        max-height: 280px;
     }
     div.card-services:hover {
         -webkit-box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
@@ -187,10 +187,10 @@ section.our-team .wrap-name h5 {
     section.our-team .wrap-team {
         width: 100%;
     }
+    .wrap-name {
+        width: 100% !important;
+    }
     div.padding-our-team-mobile {
         padding: 0px 10px 0px 10px !important;
-    }
-    div.d-block-mobile {
-        display: block;
     }
 }

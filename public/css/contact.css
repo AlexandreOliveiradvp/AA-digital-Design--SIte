@@ -117,4 +117,8 @@ section.contact input[type=radio] {
         width: 100%;
         padding: 0px 30px 0 30px;
     }
+    .col-mobile {
+        width: 50% !important;
+        padding-top: 8px;
+    }
 }

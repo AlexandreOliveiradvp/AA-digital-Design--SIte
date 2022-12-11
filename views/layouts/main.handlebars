@@ -26,7 +26,7 @@
                 <div class="col text-center-footer-mobile">
                     <a href="/"><img src="public/img/logoroxo.png" alt="Logo_AA_Digital_Design" class="logo-footer"></a>
                 </div>
-                <div class="col text-center pt-4">
+                <div class="col text-center pt-4 pt-mobile">
                     <h6>Contato</h6>
                     <span>Email: </span><span>contato@aadigitaldesign.com.br</span>
                     <br>
@@ -54,7 +54,6 @@
 </body>
 
 </html>
-
 <style>
     * {
         padding: 0;
@@ -77,6 +76,7 @@
     }
     footer h6 {
         color: #3A3D85;
+        margin-bottom: 0 !important;
     }
     footer span {
         font-size: 0.9rem;
@@ -90,7 +90,6 @@
         margin: 30px 5px 5px 0;
         cursor: pointer;
     }
-
     /* Desktop Styles > 1480px */
     @media only screen and (min-width: 1480px) {
         footer {
@@ -99,9 +98,8 @@
             width: 100%;
         }
     }
-
     /*Mobile Styles*/
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 520px) {
         .container-default {
             width: 100% !important;
             margin: 0;
@@ -117,6 +115,9 @@
         }
         div.text-center-footer-mobile svg {
             margin: 20px 0 0 0 !important;
+        }
+        .pt-mobile {
+            padding-top: 0 !important;
         }
     }
 </style>

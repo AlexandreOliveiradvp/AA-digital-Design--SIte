@@ -25,9 +25,9 @@ app.use(express.static('./'))
 
 //Routes
 app.get('/', function (req, res) {
-    const portfolio = ['Site Aliança Portuguesa', 'Edifica Representações', 'E-commerce Fábrica de Sintéticos', 'Social Mídia Royal Kllumm', 'Social Mídia Space lanches', 'Design de Logos']
+    /* const portfolio = ['Site Aliança Portuguesa', 'Edifica Representações', 'E-commerce Fábrica de Sintéticos', 'Social Mídia Royal Kllumm', 'Social Mídia Space lanches', 'Design de Logos'] */
     const titlePage = 'Home'
-    res.render('home', { portfolio: portfolio, titlePage: titlePage })
+    res.render('home', { titlePage: titlePage })
 })
 
 app.get('/portifolio', function (req, res) {
@@ -46,13 +46,13 @@ app.post('/submit', async function (req, res) {
         const email = req.body.email
         const subject = req.body.subject
         const message = req.body.message
-        console.log(name ,email, subject, message)
+        console.log(name, email, subject, message)
         await formSendMail(name, email, subject, message)
         await res.status(200).json({ data: "Dados recebidos com sucesso." })
     } catch (e) {
         res.status(400).json({ data: "Request failed." })
         console.log("ERROR")
-    } 
+    }
 })
 
 app.listen(port, function () {

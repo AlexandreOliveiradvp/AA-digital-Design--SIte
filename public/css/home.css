@@ -26,6 +26,7 @@ section.services p.service-about {
     -webkit-box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
     box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
     cursor: default;
+    justify-content: center;
 }
 
 .card-services:hover {
@@ -59,6 +60,11 @@ section.services p.service-about {
     width: 43px;
     height: 43px;
     fill: #3A3D85;
+}
+.card-custom img {
+    width: 70%;
+    height: 72%;
+    margin: 0 auto;
 }
 
 section.portfolio {

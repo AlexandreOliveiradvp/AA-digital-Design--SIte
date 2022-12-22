@@ -1,21 +1,57 @@
 <link rel="stylesheet" href="public/css/header-default.css">
 <header>
     <div class="container-default">
-        <div class="row">
-            <div class="col" data-aos="fade-right" data-aos-duration="1000">
+        <div class="row d-block-mobile">
+            <div class="col width-mobile text-center-mobile" data-aos="fade-right" data-aos-duration="1000">
                 <a href="/"><img src="public/img/logoroxo.png" alt="logo"></a>
             </div>
-            <div class="col" data-aos="fade-left" data-aos-duration="1000">
-                <nav class="nav float-end">
+            <div class="col wrap-menu" data-aos="fade-left" data-aos-duration="1000">
+                <nav class="nav float-end menu-desktop">
                     <a class="nav-link mt-4 nav-header-default" aria-current="page" href="/">Home</a>
                     <a class="nav-link mt-4 nav-header-default" href="/#services">Serviços</a>
                     <a class="nav-link mt-4 nav-header-default" href="/portifolio">Portifólio</a>
                     <a class="nav-link mt-4 nav-header-default" href="/contato">Contato</a>
+                </nav>
+                {{!-- Menu Mobile --}}
+                <div class="button-menu-mobile" onclick="showMenu()">
+                    <svg class="bi icon">
+                        <use id="iconMenu" xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#list" />
+                    </svg>
+                </div>
+                <nav class="menu-mobile" id="menuMobile">
+                    <ul>
+                        <a href="/">
+                            <li>Home</li>
+                        </a>
+                        <a href="#services">
+                            <li>Serviços</li>
+                        </a>
+                        <a href="/portifolio">
+                            <li>Portifólio</li>
+                        </a>
+                        <a href="/contato">
+                            <li>Contato</li>
+                        </a>
+                    </ul>
                 </nav>
             </div>
         </div>
     </div>
 </header>
 <script>
-    AOS.init();
+    const menuMobile = document.getElementById("menuMobile")
+    const mainText = document.getElementById("mainText")
+    const iconMenu = document.getElementById("iconMenu")
+    let controlStatus = false
+    function showMenu() {
+        if (controlStatus == false) {
+            menuMobile.style.display = 'block'
+            iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#x"
+            controlStatus = true;
+        } else {
+            menuMobile.style.display = 'none'
+            iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#list"
+            controlStatus = false
+        }
+    }
 </script>

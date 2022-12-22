@@ -21,7 +21,7 @@ section.portfolio-sites img {
     border-radius: 3px;
 }
 div.container-img-social {
-    width: 95%;
+    width: 100%;
     height: 200px;
     background-color: #E6E7F0;
     border-radius: 5px;
@@ -29,4 +29,25 @@ div.container-img-social {
 }
 .bottom {
     margin-top: 100px !important;
+}
+
+@media only screen and (max-width: 520px) {
+    section.portfolio-sites img {
+        width: 100%;
+    }
+    p.paragraph-portfolio {
+        margin-top: 10px;
+    }
+    div.bottom {
+        margin-top: 30px !important;
+    }
+    div.container-img-social {
+        width: 80%;
+        height: 250px;
+    }
+    section.portfolio-sites img {
+        width: 95%;
+        padding-left: 0.7rem;
+        border-radius: none;
+    }
 }

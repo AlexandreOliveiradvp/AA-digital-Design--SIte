@@ -77,9 +77,6 @@ div.button-menu-mobile {
     header {
         border: 0;
     }
-    div.wrap-logo-menu {
-        display: block !important;
-    }
     div.wrap-logo {
         text-align: center;
     }
@@ -131,6 +128,9 @@ div.button-menu-mobile {
         width: 100% !important;
         padding: 60px 20px 0px 20px !important;
         transition: 500ms;
+    }
+    nav.menu-mobile ul a {
+        text-decoration: none;
     }
     
 }

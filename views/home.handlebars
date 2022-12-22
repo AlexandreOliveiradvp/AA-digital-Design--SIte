@@ -96,10 +96,10 @@
             <div class="col-12 d-flex flex-wrap">
                 {{#each portfolio}}
                 <div class="col-4 p-3 container-portfolio-mobile">
-                    <div class="card card-custom container-img-portfolio mt-4"><img src="" alt=""></div>
+                    <div class="card card-custom container-img-portfolio mt-4"><img src="{{imgPath}}" alt=""></div>
                     <div class="col-12 text-center">
-                        <h4 class="mt-4 title-portfolio">{{this}}</h4>
-                        <a href="/portifolio"><button class="btn btn-custom-portfolio">Saiba Mais</button></a>
+                        <h4 class="mt-4 title-portfolio">{{title}}</h4>
+                        <a href="/portifolio{{idUrl}}"><button class="btn btn-custom-portfolio">Saiba Mais</button></a>
                     </div>
                 </div>
                 {{/each}}
@@ -149,16 +149,16 @@
                 <h2 class="title-section mt-5">Nosso Time</h2>
             </div>
         </div>
-            <div class="row d-flex" data-aos="fade-up" data-aos-duration="1000">
+            <div class="row d-flex d-block-mobile" data-aos="fade-up" data-aos-duration="1000">
                 <div class="col p-4">
-                    <div class="wrap-team"></div>
+                    <div class="wrap-team"><img src="/public//img/alexandre.jpeg" alt=""></div>
                     <div class="wrap-name text-center pt-4">
                         <h5>Alexandre Oliveira - Desenvolvedor</h5>
                     </div>
                 </div>
                 <div class="col p-4">
-                    <div class="wrap-team float-end"></div>
-                    <div class="wrap-name float-end text-center pt-4">
+                    <div class="wrap-team"><img src="/public//img/aline.jpeg" alt=""></div>
+                    <div class="wrap-name text-center pt-4">
                         <h5>Aline Oliveira - Design/Social Mídia</h5>
                     </div>
                 </div>

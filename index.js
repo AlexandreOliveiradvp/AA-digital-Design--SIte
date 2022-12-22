@@ -25,7 +25,14 @@ app.use(express.static('./'))
 
 //Routes
 app.get('/', function (req, res) {
-    const portfolio = ['Site Aliança Portuguesa', 'Edifica Representações', 'E-commerce Fábrica de Sintéticos', 'Social Mídia Royal Kllumm', 'Social Mídia Space lanches', 'Design de Logos']
+    const portfolio = [
+     {title: 'Site Aliança Portuguesa', imgPath: 'public/img/logoalianca.png', idUrl: '#sitealianca'},
+     {title: 'Edifica Representações', imgPath: 'public/img/logoEdifica.png', idUrl: '#siteedifica'},
+     {title: 'E-commerce Fábrica de Sintéticos', imgPath: 'public/img/logoFabrica.png', idUrl: '#sitefabrica'},
+     {title: 'Social Mídia Royal Kllumm', imgPath: 'public/img/logoalianca.png', idUrl: '#royalkllumm'},
+     {title: 'Social Mídia Space lanches', imgPath: 'public/img/logoEdifica.png', idUrl: '#spacelanches'},
+     {title: 'Design de Logos', imgPath: 'public/img/logoFabrica.png', idUrl: '#designlogos'} 
+]
     const titlePage = 'Home'
     res.render('home', { portfolio: portfolio, titlePage: titlePage })
 })
@@ -40,18 +47,17 @@ app.get('/contato', function (req, res) {
     res.render('contact', { titlePage: titlePage })
 })
 
-app.post('/submit', function (req, res) {
+app.post('/submit', async function (req, res) {
     try {
         const name = req.body.name
         const email = req.body.email
         const subject = req.body.subject
-        const massage = req.body.massage
-        formSendMail(name, email, subject, massage)
-        let notificationSuccess = true
-        res.render('contact', {notificationSuccess: notificationSuccess})
+        const message = req.body.message
+        console.log(name, email, subject, message)
+        await formSendMail(name, email, subject, message)
+        await res.status(200).json({ data: "Dados recebidos com sucesso." })
     } catch (e) {
-        let notificationDanied = true
-        res.render('contact', {notificationDanied: notificationDanied})
+        res.status(400).json({ data: "Request failed." })
         console.log("ERROR")
     }
 })

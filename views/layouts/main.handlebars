@@ -10,6 +10,7 @@
     <link href="node_modules/aos/dist/aos.css" rel="stylesheet">
     {{!-- Import bootstrap css --}}
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/default.css">
     <title>AA Digital Design - {{titlePage}}</title>
 </head>
 
@@ -26,7 +27,7 @@
                 <div class="col text-center-footer-mobile">
                     <a href="/"><img src="public/img/logoroxo.png" alt="Logo_AA_Digital_Design" class="logo-footer"></a>
                 </div>
-                <div class="col text-center pt-4">
+                <div class="col text-center pt-4 pt-mobile">
                     <h6>Contato</h6>
                     <span>Email: </span><span>contato@aadigitaldesign.com.br</span>
                     <br>
@@ -51,72 +52,3 @@
     <script>
         AOS.init();
     </script>
-</body>
-
-</html>
-
-<style>
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-        font-family: 'Lato', sans-serif;
-    }
-    div.container-default {
-        width: 1080px;
-        margin: 0 auto;
-    }
-    footer {
-        background-color: #E7EAF3;
-        max-height: 120px;
-    }
-    footer .logo-footer {
-        width: 250px;
-        height: 100px;
-        cursor: pointer;
-    }
-    footer h6 {
-        color: #3A3D85;
-    }
-    footer span {
-        font-size: 0.9rem;
-        font-weight: 300;
-        color: #3A3D85;
-    }
-    footer .icon-footer {
-        width: 32px;
-        height: 40px;
-        fill: #3A3D85;
-        margin: 30px 5px 5px 0;
-        cursor: pointer;
-    }
-
-    /* Desktop Styles > 1480px */
-    @media only screen and (min-width: 1480px) {
-        footer {
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
-    }
-
-    /*Mobile Styles*/
-    @media only screen and (max-width: 500px) {
-        .container-default {
-            width: 100% !important;
-            margin: 0;
-        }
-        footer {
-            max-height: 280px !important;
-        }
-        div.d-block-mobile-footer {
-            display: block;
-        }
-        div.text-center-footer-mobile {
-            text-align: center !important;
-        }
-        div.text-center-footer-mobile svg {
-            margin: 20px 0 0 0 !important;
-        }
-    }
-</style>

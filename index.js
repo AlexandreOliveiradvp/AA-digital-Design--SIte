@@ -25,9 +25,16 @@ app.use(express.static('./'))
 
 //Routes
 app.get('/', function (req, res) {
-    /* const portfolio = ['Site Aliança Portuguesa', 'Edifica Representações', 'E-commerce Fábrica de Sintéticos', 'Social Mídia Royal Kllumm', 'Social Mídia Space lanches', 'Design de Logos'] */
+    const portfolio = [
+     {title: 'Site Aliança Portuguesa', imgPath: 'public/img/logoalianca.png', idUrl: '#sitealianca'},
+     {title: 'Edifica Representações', imgPath: 'public/img/logoEdifica.png', idUrl: '#siteedifica'},
+     {title: 'E-commerce Fábrica de Sintéticos', imgPath: 'public/img/logoFabrica.png', idUrl: '#sitefabrica'},
+     {title: 'Social Mídia Royal Kllumm', imgPath: 'public/img/logoalianca.png', idUrl: '#royalkllumm'},
+     {title: 'Social Mídia Space lanches', imgPath: 'public/img/logoEdifica.png', idUrl: '#spacelanches'},
+     {title: 'Design de Logos', imgPath: 'public/img/logoFabrica.png', idUrl: '#designlogos'} 
+]
     const titlePage = 'Home'
-    res.render('home', { titlePage: titlePage })
+    res.render('home', { portfolio: portfolio, titlePage: titlePage })
 })
 
 app.get('/portifolio', function (req, res) {

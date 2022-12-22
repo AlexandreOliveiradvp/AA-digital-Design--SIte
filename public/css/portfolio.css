@@ -35,21 +35,15 @@ div.container-img-social {
     section.portfolio-sites img {
         width: 100%;
     }
-    div.text-center-mobile {
-        text-align: center;
-    }
     p.paragraph-portfolio {
         margin-top: 10px;
     }
     div.bottom {
         margin-top: 30px !important;
     }
-    div.width-mobile {
-        width: 100%;
-        padding: 1.5rem;
-    }
     div.container-img-social {
-        width: 95%;
+        width: 80%;
+        height: 250px;
     }
     section.portfolio-sites img {
         width: 95%;

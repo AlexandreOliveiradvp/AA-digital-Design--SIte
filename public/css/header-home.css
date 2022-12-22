@@ -77,9 +77,6 @@ div.button-menu-mobile {
     header {
         border: 0;
     }
-    div.wrap-logo-menu {
-        display: block !important;
-    }
     div.wrap-logo {
         text-align: center;
     }

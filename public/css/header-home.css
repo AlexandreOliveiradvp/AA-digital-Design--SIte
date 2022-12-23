@@ -1,4 +1,4 @@
-section.start{
+section.start {
     width: 100%;
     height: 100vh;
     background-image: url("../img/WallpapperSectionStart.jpg");
@@ -7,7 +7,7 @@ section.start{
     position: relative;
     z-index: 1;
 }
-div.mask{
+div.mask {
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -16,53 +16,60 @@ div.mask{
     background: rgba(38, 41, 67, 0.8);
     z-index: 2;
 }
-div.container-default{
+div.container-default {
     width: 1080px;
     margin: 0 auto;
 }
-header{
+header {
     width: 100%;
     height: 85px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.15);
     z-index: 3;
 }
-header .nav-header-home{
-    transition: 0.5s;
+header .nav-header-home {
+    text-decoration: none;
 }
-header .nav-header-home:hover{
-    transform: scale(1.2);
-    transition: 0.5s;
+header .nav-header-home::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 300ms;
 }
-header img{
+header .nav-header-home:hover::after {
+    width: 100%;
+}
+header img {
     width: 260px;
     margin-top: -27px;
     cursor: pointer;
 }
-div.content{
+div.content {
     width: 100%;
     height: calc( 100vh - 85px);
     z-index: 3;
 }
-div.content div.content-text{
+div.content div.content-text {
     width: 38%;
     padding-top: 60px;
 }
-div.content div.content-text h1{
+div.content div.content-text h1 {
     font-size: 2.1rem;
     color: #E6E6E6;
 }
-div.content div.content-text .btn-custom{
+div.content div.content-text .btn-custom {
     color: #E6E6E6;
     border: 2px solid #E6E6E6;
     margin-top: 70px;
     transition: 600ms;
 }
-div.content div.content-text .btn-custom:hover{
+div.content div.content-text .btn-custom:hover {
     background-color: rgba(19, 21, 36, 0.8);
     color: white;
     transform: scale(1.1);
 }
-div.content div.content-text img:hover{
+div.content div.content-text img:hover {
     transform: scale(1.1);
     transition: 600ms;
 }
@@ -74,7 +81,7 @@ div.button-menu-mobile {
 }
 /* Mobile Styles */
 @media only screen and (max-width: 500px) {
-    header {
+    header  {
         border: 0;
     }
     div.wrap-logo {

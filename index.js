@@ -1,10 +1,12 @@
 import express from "express"
 import exphbs from "express-handlebars"
 import formSendMail from "./mail/mail.js"
+import * as dotenv from 'dotenv'
 const port = 3000
 
 
 const app = express()
+const linkWhats = process.env.LINK_WHATS
 
 //Partial invocation function
 const hbs = exphbs.create({
@@ -29,22 +31,22 @@ app.get('/', function (req, res) {
      {title: 'Site Aliança Portuguesa', imgPath: 'public/img/logoalianca.png', idUrl: '#sitealianca'},
      {title: 'Edifica Representações', imgPath: 'public/img/logoEdifica.png', idUrl: '#siteedifica'},
      {title: 'E-commerce Fábrica de Sintéticos', imgPath: 'public/img/logoFabrica.png', idUrl: '#sitefabrica'},
-     {title: 'Social Mídia Royal Kllumm', imgPath: 'public/img/logoalianca.png', idUrl: '#royalkllumm'},
-     {title: 'Social Mídia Space lanches', imgPath: 'public/img/logoEdifica.png', idUrl: '#spacelanches'},
-     {title: 'Design de Logos', imgPath: 'public/img/logoFabrica.png', idUrl: '#designlogos'} 
+     {title: 'Social Mídia Royal Kllumm', imgPath: 'public/img/logoKllumm.jpg', idUrl: '#royalkllumm'},
+     {title: 'Social Mídia Space lanches', imgPath: 'public/img/logoSpacelanches.png', idUrl: '#spacelanches'},
+     {title: 'Design de Logos', imgPath: 'public/img/logoEspacobronze.png', idUrl: '#designlogos'} 
 ]
     const titlePage = 'Home'
-    res.render('home', { portfolio: portfolio, titlePage: titlePage })
+    res.render('home', { portfolio: portfolio, titlePage: titlePage, linkWhats: linkWhats })
 })
 
 app.get('/portifolio', function (req, res) {
     const titlePage = 'Portifólio'
-    res.render('portfolio', { titlePage: titlePage })
+    res.render('portfolio', { titlePage: titlePage, linkWhats: linkWhats })
 })
 
 app.get('/contato', function (req, res) {
     const titlePage = 'Contato'
-    res.render('contact', { titlePage: titlePage })
+    res.render('contact', { titlePage: titlePage, linkWhats: linkWhats })
 })
 
 app.post('/submit', async function (req, res) {

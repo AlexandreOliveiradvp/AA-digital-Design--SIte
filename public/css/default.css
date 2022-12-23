@@ -40,15 +40,6 @@ footer .icon-footer {
     cursor: pointer;
 }
 
-/* Desktop Styles > 1480px */
-@media only screen and (min-width: 1480px) {
-    footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    }
-}
-
 /*Mobile Styles*/
 @media only screen and (max-width: 520px) {
     .container-default {
@@ -86,7 +77,41 @@ footer .icon-footer {
         width: 100% !important;
         padding: 1.5rem;
     }
+
     div.text-center-mobile {
-    text-align: center;
+        text-align: center;
+    }
+}
+
+/* button WPP styles */
+div.container-whatsapp {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 5%;
+    right: 4%;
+    z-index: 4;
+    cursor: pointer;
+}
+
+div.container-whatsapp .icon-whats {
+    width: 60px;
+    height: 60px;
+    fill: #50ec62;
+    transition: 0.5s;
+}
+
+div.container-whatsapp .icon-whats:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 520px) {
+    div.container-whatsapp {
+        position: fixed;
+        right: 8%;
+        bottom: 4%;
+
     }
 }

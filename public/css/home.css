@@ -102,13 +102,19 @@ button.btn-custom-portfolio:active {
     color: white !important;
 }
 
-section.depoiment .wrap-depoiment {
+section.depoiment .wrap-img {
     width: 90px;
     height: 90px;
     background-color: #818181;
     border-radius: 50px;
     margin: 0 auto;
     margin-top: 55px;
+}
+
+section.depoiment .wrap-img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
 }
 
 section.depoiment h4 {
@@ -123,6 +129,12 @@ section.depoiment p {
     letter-spacing: 0.8px;
     line-height: 20px;
     font-style: italic;
+}
+
+section.depoiment p.office {
+    font-style: normal;
+    font-size: 0.8rem;
+    color: #666666;
 }
 
 section.our-team .wrap-team {

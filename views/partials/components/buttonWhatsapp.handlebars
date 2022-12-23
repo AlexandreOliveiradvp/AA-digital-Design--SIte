@@ -1,37 +1,7 @@
-<div class="container-whatsapp">
-    <svg class="bi icon-whats">
-        <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#whatsapp" />
-    </svg>
-</div>
-
-<style>
-    .container-whatsapp {
-        width: 60px;
-        height: 60px;
-        border-radius: 50px;
-        position: fixed;
-        bottom: 5%;
-        right: 4%;
-        z-index: 4;
-        cursor: pointer;
-    }
-    .container-whatsapp .icon-whats {
-        width: 60px;
-        height: 60px;
-        fill: #50ec62;
-        transition: 0.5s;
-    }
-    .container-whatsapp .icon-whats:hover {
-        transform: scale(1.1);
-        transition: 0.5s;
-    }
-
-@media only screen and (max-width: 520px) {
-    .container-whatsapp {
-        position: fixed;
-        right: 8%;
-        bottom: 4%;
-
-    }
-}
-</style>
+<a href="{{linkWhats}}" target="_blank">
+    <div class="container-whatsapp">
+        <svg class="bi icon-whats">
+            <use xlink:href="node_modules/bootstrap-icons/bootstrap-icons.svg#whatsapp" />
+        </svg>
+    </div>
+</a>

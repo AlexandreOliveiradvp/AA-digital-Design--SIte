@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="public/css/portfolio.css">
 {{!-- Import header default --}}
 {{> headerDefault}}
+{{!-- Sites Portfólio --}}
 <section class="portfolio-sites" data-aos="fade-up" data-aos-duration="1000">
     <div class="container-default">
         <div class="row">
@@ -8,135 +9,45 @@
                 <h1>Portifólio</h1>
             </div>
         </div>
-        {{!-- Aliança Portuguesa --}}
+        {{#each sites}}
         <div class="row" id="sitealianca">
             <div class="col-12 pt-5 text-center-mobile">
-                <h4 class="subtitle">Site Aliança Portuguesa</h4>
+                <h4 class="subtitle">{{title}}</h4>
             </div>
         </div>
         <div class="row d-block-mobile p-3">
             <div class="col p-0">
-                <img src="public/img/sitealianca.png" alt="preview">
+                <img src="{{imgPath}}" alt="preview">
             </div>
             <div class="col">
-                <p class="paragraph-portfolio">A Aliança portuguesa é uma empresa focada em vistos e cidadania
-                    portuguesa.
-                    Tivemos o prazer de desenvolvermos o site deste cliente. Seguimos um padrão de design limpo e objetivo
-                    com a intenção de porporcionar conforto e comodidade aos clientes enquanto estão navegando por suas
-                    páginas.
-                    Confira o resultado em: <a href="https://aliancaportuguesa.com.br/"
-                        target="_blank">https://aliancaportuguesa.com.br/</a></p>
+                <p class="paragraph-portfolio">{{text}} <a href="{{link}}" target="_blank">{{link}}</a></p>
             </div>
         </div>
-        {{!-- Edifica Representações --}}
-        <div class="row" id="siteedifica">
-            <div class="col-12 pt-5 text-center-mobile">
-                <h4 class="subtitle">Site Edifica Representações</h4>
-            </div>
-        </div>
-        <div class="row d-block-mobile p-3">
-            <div class="col p-0">
-                <img src="public/img/edificarepresentações.png" alt="preview">
-            </div>
-            <div class="col">
-                <p class="paragraph-portfolio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
-                    malesuada nunc, at tincidunt odio.
-                    Vestibulum auctor velit magna, non feugiat magna molestie quis. Aenean hendrerit elit orci, eget
-                    fermentum urna interdum eget. Nullam id nunc eu enim eleifend sollicitudin. Integer sed molestie
-                    enim, eu tempor nibh. Sed id sodales nisi. Nulla mollis efficitur cursus. Donec facilisis finibus
-                    scelerisque. Nam sed ligula sed mauris pharetra vestibulum in in nunc.
-                    Confira o resultado em: <a href="https://edificarepresentacoes.com.br/"
-                        target="_blank">https://edificarepresentacoes.com.br/</a></p>
-            </div>
-        </div>
-        {{!-- Fábrica Sintéticos --}}
-        <div class="row" id="sitefabrica">
-            <div class="col-12 pt-5 text-center-mobile">
-                <h4 class="subtitle">E-commerce Fábrica Sintéticos</h4>
-            </div>
-        </div>
-        <div class="row d-block-mobile p-3">
-            <div class="col p-0">
-                <img src="public/img/fabricasinteticos.png" alt="preview">
-            </div>
-            <div class="col">
-                <p class="paragraph-portfolio">A Fábrica Sintéticos é uma loja virtual de peças sintéticas para a
-                    produção de bolsas, carteiras,
-                    cintos e etc.
-                    Seu design foi pensado para impactar e gerar confiança em seus clientes. Trabalhamos dando destaque
-                    para fotos e informações dos seus produtos afim de que os clientes não tenham dúvidas e conheçam
-                    tudo o que precisam sobre o produto que estão comprando.
-
-                    Confira o resultado em: <a href="https://fabricasinteticos.com.br/"
-                        target="_blank">https://fabricasinteticos.com.br/</a></p>
-            </div>
-        </div>
+        {{/each}}
+    </div>
     </div>
 </section>
+{{!-- Social Mídia Portfólio --}}
 <section class="portfolio-social pb-5">
     <div class="container-default">
+        {{#each socialMidia}}
         <div class="row" id="royalkllumm">
             <div class="col pt-5 text-center-mobile">
-                <h4 class="subtitle">Social Mídia Royal Kllumm</h4>
+                <h4 class="subtitle">{{title}}</h4>
             </div>
         </div>
         <div class="row pt-4 d-block-mobile">
             <div class="col justify-content-center">
-                <div class="container-img-social"></div>
+                <div class="container-img-social"><img src="{{imgPath1}}"></div>
             </div>
             <div class="col">
-                <div class="container-img-social bottom"></div>
+                <div class="container-img-social bottom"><img src="{{imgPath2}}"></div>
             </div>
             <div class="col-6 width-mobile">
-                <p class="paragraph-portfolio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
-                    malesuada nunc, at tincidunt odio.
-                    Vestibulum auctor velit magna, non feugiat magna molestie quis. Aenean hendrerit elit orci, eget
-                    fermentum urna interdum eget. Nullam id nunc eu enim eleifend sollicitudin. Integer sed molestie
-                    enim, eu tempor nibh. Sed id sodales nisi. Nulla mollis efficitur cursus. Donec facilisis finibus
-                    scelerisque. Nam sed ligula sed mauris pharetra vestibulum in in nunc.</p>
+                <p class="paragraph-portfolio">{{text}}</p>
             </div>
         </div>
-        <div class="row" id="spacelanches">
-            <div class="col pt-5 text-center-mobile">
-                <h4 class="subtitle">Social Mídia Space Lanches</h4>
-            </div>
-        </div>
-        <div class="row pt-4 d-block-mobile">
-            <div class="col justify-content-center">
-                <div class="container-img-social"></div>
-            </div>
-            <div class="col">
-                <div class="container-img-social bottom"></div>
-            </div>
-            <div class="col-6 width-mobile">
-                <p class="paragraph-portfolio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
-                    malesuada nunc, at tincidunt odio.
-                    Vestibulum auctor velit magna, non feugiat magna molestie quis. Aenean hendrerit elit orci, eget
-                    fermentum urna interdum eget. Nullam id nunc eu enim eleifend sollicitudin. Integer sed molestie
-                    enim, eu tempor nibh. Sed id sodales nisi. Nulla mollis efficitur cursus. Donec facilisis finibus
-                    scelerisque. Nam sed ligula sed mauris pharetra vestibulum in in nunc.</p>
-            </div>
-        </div>
-        <div class="row" id="designlogos">
-            <div class="col pt-5 text-center-mobile">
-                <h4 class="subtitle">Design de Logos</h4>
-            </div>
-        </div>
-        <div class="row pt-4 d-block-mobile">
-            <div class="col justify-content-center">
-                <div class="container-img-social"></div>
-            </div>
-            <div class="col">
-                <div class="container-img-social bottom"></div>
-            </div>
-            <div class="col-6 width-mobile">
-                <p class="paragraph-portfolio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla id
-                    malesuada nunc, at tincidunt odio.
-                    Vestibulum auctor velit magna, non feugiat magna molestie quis. Aenean hendrerit elit orci, eget
-                    fermentum urna interdum eget. Nullam id nunc eu enim eleifend sollicitudin. Integer sed molestie
-                    enim, eu tempor nibh. Sed id sodales nisi. Nulla mollis efficitur cursus. Donec facilisis finibus
-                    scelerisque. Nam sed ligula sed mauris pharetra vestibulum in in nunc.</p>
-            </div>
-        </div>
+        {{/each}}
+    </div>
     </div>
 </section>

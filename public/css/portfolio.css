@@ -39,9 +39,11 @@ div.container-img-social img {
 @media only screen and (max-width: 520px) {
     section.portfolio-sites img {
         width: 100%;
+        height: 180px;
     }
     p.paragraph-portfolio {
         margin-top: 10px;
+        text-align: center;
     }
     div.bottom {
         margin-top: 30px !important;

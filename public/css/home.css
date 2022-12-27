@@ -20,13 +20,11 @@ section.services p.service-about {
 }
 
 .card-custom {
-    padding: 15px 25px;
+    padding: 35px 15px;
     display: flex;
-    height: 340px;
     -webkit-box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
     box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
-    cursor: default;
-    justify-content: center;
+    min-height: 330px;
 }
 
 .card-services:hover {
@@ -66,6 +64,7 @@ section.services p.service-about {
     width: 170px;
     height: 170px;
     margin: 0 auto;
+    border-radius: 3px;
 }
 
 section.portfolio {
@@ -212,6 +211,10 @@ section.our-team .wrap-name h5 {
     }
     section.our-team .wrap-team {
         width: 100%;
+        height: 370px;
+    }
+    section.our-team .wrap-team img {
+        height: 370px;
     }
     .wrap-name {
         width: 100% !important;

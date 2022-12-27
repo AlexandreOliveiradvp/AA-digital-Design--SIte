@@ -47,9 +47,11 @@
                     <h1 data-aos="fade-down" data-aos-duration="1000">
                         O Lugar certo para desenvolver a sua identidade no mundo digital.
                     </h1>
-                    <button class="btn btn-custom btn-lg" data-aos="fade-up" data-aos-duration="1000">
-                        Fale Agora Conosco
-                    </button>
+                    <a href="{{linkWhats}}" target="_blank">
+                        <button class="btn btn-custom btn-lg" data-aos="fade-up" data-aos-duration="1000">
+                            Fale Agora Conosco
+                        </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -62,13 +64,13 @@
     let controlStatus = false
     function showMenu() {
         if (controlStatus == false) {
-            menuMobile.style.display = 'block'
-            mainText.style.marginTop = '45px'
+            menuMobile.classList.add("show-menu-mobile")
+            mainText.style.marginTop = "45px"
             iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#x"
             controlStatus = true;
         } else {
-            menuMobile.style.display = 'none'
-            mainText.style.marginTop = '0px'
+            menuMobile.classList.remove("show-menu-mobile")
+            mainText.style.marginTop = "0px"
             iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#list"
             controlStatus = false
         }

@@ -31,6 +31,10 @@ div.button-menu-mobile {
 .menu-mobile {
     display: none;
 }
+.show-menu-mobile { 
+    transition: 500ms;
+    display: block !important;
+}
 /* Mobile Styles */
 @media only screen and (max-width: 520px) {
     header {

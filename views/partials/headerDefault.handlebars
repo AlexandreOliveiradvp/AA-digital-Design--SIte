@@ -45,11 +45,11 @@
     let controlStatus = false
     function showMenu() {
         if (controlStatus == false) {
-            menuMobile.style.display = 'block'
+            menuMobile.classList.add("show-menu-mobile")
             iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#x"
             controlStatus = true;
         } else {
-            menuMobile.style.display = 'none'
+            menuMobile.classList.remove("show-menu-mobile")
             iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#list"
             controlStatus = false
         }

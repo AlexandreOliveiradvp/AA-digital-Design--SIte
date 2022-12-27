@@ -30,9 +30,10 @@ section.services p.service-about {
 }
 
 .card-services:hover {
-    transition: 600ms;
+    transition: 700ms;
     -webkit-box-shadow: 15px 15px 16px -4px rgba(0, 0, 0, 0.60);
     box-shadow: 18px 18px 19px -4px rgba(0, 0, 0, 0.60);
+    cursor: wait;
 }
 
 .title-card {

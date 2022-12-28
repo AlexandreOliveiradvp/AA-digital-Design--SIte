@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="public/css/header-default.css">
-<header>
+<header id="header">
     <div class="container-default">
         <div class="row d-block-mobile">
             <div class="col width-mobile text-center-mobile" data-aos="fade-down" data-aos-duration="1000">
@@ -42,14 +42,17 @@
     const menuMobile = document.getElementById("menuMobile")
     const mainText = document.getElementById("mainText")
     const iconMenu = document.getElementById("iconMenu")
+    const header = document.getElementById("header")
     let controlStatus = false
     function showMenu() {
         if (controlStatus == false) {
             menuMobile.classList.add("show-menu-mobile")
+            header.classList.add("header-expanded")
             iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#x"
             controlStatus = true;
         } else {
             menuMobile.classList.remove("show-menu-mobile")
+            header.classList.remove("header-expanded")
             iconMenu.href.baseVal = "node_modules/bootstrap-icons/bootstrap-icons.svg#list"
             controlStatus = false
         }

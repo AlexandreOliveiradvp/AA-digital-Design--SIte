@@ -31,14 +31,16 @@ div.button-menu-mobile {
 .menu-mobile {
     display: none;
 }
-.show-menu-mobile { 
-    transition: 500ms;
-    display: block !important;
-}
 /* Mobile Styles */
 @media only screen and (max-width: 520px) {
     header {
         border: 0;
+        padding-bottom: 25px;
+        height: 210px;
+        transition: 500ms;
+    }
+    .header-expanded {
+        height: 330px;
     }
     div.wrap-logo-menu {
         display: block !important;
@@ -66,11 +68,17 @@ div.button-menu-mobile {
         fill: #3A3D85;
     }
     nav.menu-mobile {
+        display: block;
         text-align: center;
-        transition: 500ms;
         margin-top: 10px;
         border-top: #e6e6e62d 1px solid;
-        display: none;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 200ms linear;
+    }
+    .show-menu-mobile { 
+        visibility: visible !important;
+        opacity: 1 !important;
     }
     nav.menu-mobile ul {
         padding: 0;

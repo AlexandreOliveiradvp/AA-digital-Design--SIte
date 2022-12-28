@@ -79,11 +79,8 @@ div.button-menu-mobile {
 .menu-mobile {
     display: none;
 }
-.show-menu-mobile { 
-    display: block !important;
-}
 /* Mobile Styles */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 520px) {
     header  {
         border: 0;
     }
@@ -111,11 +108,17 @@ div.button-menu-mobile {
         fill: rgba(255, 255, 255, 0.45);
     }
     nav.menu-mobile {
+        display: block;
         text-align: center;
-        transition: 500ms;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 200ms linear;
         margin-top: 10px;
+    }
+    .show-menu-mobile { 
+        visibility: visible !important;
+        opacity: 1 !important;
         border-top: #e6e6e62d 1px solid;
-        display: none;
     }
     nav.menu-mobile ul {
         padding: 0;
@@ -124,7 +127,7 @@ div.button-menu-mobile {
         color: white;
         list-style: none;
         width: 100%;
-        font-size: 0.9rem;
+        font-size: 1rem;
         border-bottom: #e6e6e62d 1px solid;
         padding: 3px 3px;
         cursor: pointer;

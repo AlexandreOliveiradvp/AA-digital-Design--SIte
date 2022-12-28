@@ -139,7 +139,6 @@ section.depoiment p.office {
 section.our-team .wrap-team {
     width: 360px;
     height: 450px;
-    background-color: #DDD;
     margin: 0 auto;
     margin-top: 20px;
     border-radius: 5px;
@@ -184,7 +183,7 @@ section.our-team .wrap-name h5 {
 }
 
 /* Mobile Styles */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 520px) {
     div.content-text h1 {
         margin-top: 100px;
     }
@@ -213,12 +212,15 @@ section.our-team .wrap-name h5 {
     }
     section.our-team .wrap-team {
         width: 100%;
-        height: 370px;
+        height: 300px;
+        text-align: center;
     }
     section.our-team .wrap-team img {
-        height: 400px;
+        width: 230px;
+        height: 300px;
+        margin: 0 auto;
     }
-    .wrap-name {
+    section.our-team .wrap-name {
         width: 100% !important;
     }
     div.padding-our-team-mobile {

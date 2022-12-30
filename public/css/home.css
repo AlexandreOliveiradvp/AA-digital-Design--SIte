@@ -24,7 +24,7 @@ section.services p.service-about {
     display: flex;
     -webkit-box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
     box-shadow: 5px 5px 6px -4px rgba(0, 0, 0, 0.42);
-    min-height: 330px;
+    min-height: 340px;
 }
 
 .card-services:hover {

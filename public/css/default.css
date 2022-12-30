@@ -69,6 +69,10 @@ footer .icon-footer {
         padding-top: 0 !important;
     }
 
+    .p-mobile {
+        padding: 0 15px;
+    }
+
     div.d-block-mobile {
         display: block !important;
     }

@@ -226,4 +226,7 @@ section.our-team .wrap-name h5 {
     div.padding-our-team-mobile {
         padding: 0px 10px 0px 10px !important;
     }
+    h2.title-section-margin-mobile {
+        margin-top: 50px;
+    }
 }

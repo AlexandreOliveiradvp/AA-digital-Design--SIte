@@ -1,6 +1,6 @@
 # AA-digital-Design--SIte
 
-- This is a project for a design company/social-media website built on node.js using handlebars dependency as the template engine.
+- This is a project for a design company/social-media website built on node.js and express using handlebars dependency as the template engine.
 
 ## Dependencies
 

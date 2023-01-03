@@ -22,6 +22,16 @@
 ```
 npm install
 ```
+## Enviroment Variables
+
+- It is necessary to create an .env file with the variables described below.
+Configuration required for email sending and whatsapp API to work
+
+```
+USRAPP_GMAIL=
+PSWAPP_GMAIL=
+LINK_WHATS=
+```
 
 ## Start server in development environment
 

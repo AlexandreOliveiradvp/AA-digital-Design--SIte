@@ -1,109 +1,108 @@
 header {
-    background-color: #E7EAF3;
-    padding-bottom: 15px;
+  background-color: #e7eaf3;
+  padding-bottom: 15px;
 }
 header img {
-    margin-top: -10px;
-    width: 250px;
-    height: 100px;
+  margin-top: -10px;
+  width: 250px;
+  height: 100px;
 }
 header .nav-header-default {
-    color: #3A3D85;
-    text-decoration: none;
+  color: #3a3d85;
+  text-decoration: none;
 }
 header .nav-header-default::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #3A3D85;
-    transition: width 300ms;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #3a3d85;
+  transition: width 300ms;
 }
 header .nav-header-default:hover::after {
-    width: 100%;
+  width: 100%;
 }
 header .nav-header-default:hover {
-    color: #3A3D85;
+  color: #3a3d85;
 }
 div.button-menu-mobile {
-    display: none;
+  display: none;
 }
 .menu-mobile {
-    display: none;
+  display: none;
 }
 /* Mobile Styles */
 @media only screen and (max-width: 520px) {
-    header {
-        border: 0;
-        padding-bottom: 25px;
-        height: 210px;
-        transition: 500ms;
-    }
-    .header-expanded {
-        height: 330px;
-    }
-    div.wrap-logo-menu {
-        display: block !important;
-    }
-    div.wrap-logo {
-        text-align: center;
-    }
-    div.wrap-menu nav.menu-desktop {
-        display: none;
-    }
-    div.button-menu-mobile {
-        display: block;
-        text-align: center;
-        width: 40px;
-        height: 40px;
-        margin: 0 auto;
-        border: 2px solid #3A3D85;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-    div.button-menu-mobile svg {
-        width: 35px;
-        margin-top: -57px;
-        margin-left: 1px;
-        fill: #3A3D85;
-    }
-    nav.menu-mobile {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-        border-top: #e6e6e62d 1px solid;
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s, opacity 200ms linear;
-    }
-    .show-menu-mobile { 
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-    nav.menu-mobile ul {
-        padding: 0;
-    }
-    nav.menu-mobile ul li {
-        color: #3A3D85;
-        list-style: none;
-        width: 100%;
-        font-size: 0.9rem;
-        border-bottom: #b1b4ff 1px solid;
-        padding: 3px 3px;
-        cursor: pointer;
-        transition: 350ms;
-    }
-    nav.menu-mobile ul li:hover {
-        background-color: #2a333d94;
-        transition: 350ms;
-    }
-    div.content-text {
-        width: 100% !important;
-        padding: 60px 20px 0px 20px !important;
-        transition: 500ms;
-    }
-    nav.menu-mobile ul a {
-        text-decoration: none;
-    }
-    
+  header {
+    border: 0;
+    padding-bottom: 25px;
+    height: 210px;
+    transition: 500ms;
+  }
+  .header-expanded {
+    height: 330px;
+  }
+  div.wrap-logo-menu {
+    display: block !important;
+  }
+  div.wrap-logo {
+    text-align: center;
+  }
+  div.wrap-menu nav.menu-desktop {
+    display: none;
+  }
+  div.button-menu-mobile {
+    display: block;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border: 2px solid #3a3d85;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  div.button-menu-mobile svg {
+    width: 35px;
+    margin-top: -57px;
+    margin-left: 1px;
+    fill: #3a3d85;
+  }
+  nav.menu-mobile {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    border-top: #e6e6e62d 1px solid;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 200ms linear;
+  }
+  .show-menu-mobile {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  nav.menu-mobile ul {
+    padding: 0;
+  }
+  nav.menu-mobile ul li {
+    color: #3a3d85;
+    list-style: none;
+    width: 100%;
+    font-size: 0.9rem;
+    border-bottom: #b1b4ff 1px solid;
+    padding: 3px 3px;
+    cursor: pointer;
+    transition: 350ms;
+  }
+  nav.menu-mobile ul li:hover {
+    background-color: #2a333d94;
+    transition: 350ms;
+  }
+  div.content-text {
+    width: 100% !important;
+    padding: 60px 20px 0px 20px !important;
+    transition: 500ms;
+  }
+  nav.menu-mobile ul a {
+    text-decoration: none;
+  }
 }

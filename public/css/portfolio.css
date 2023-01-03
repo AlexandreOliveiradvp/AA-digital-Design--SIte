@@ -1,60 +1,60 @@
 section.portfolio-sites h1 {
-    color: #5C5FB5;
-    font-weight: 600;
-    font-size: 2.1rem;
-    letter-spacing: 2px;
+  color: #5c5fb5;
+  font-weight: 600;
+  font-size: 2.1rem;
+  letter-spacing: 2px;
 }
 .subtitle {
-    color: #5C5FB5;
-    font-weight: 500;
-    font-size: 1.4rem;
-    letter-spacing: 2px;
+  color: #5c5fb5;
+  font-weight: 500;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
 }
 p.paragraph-portfolio {
-    color: #3A3D85;
-    font-size: 0.9rem;
-    letter-spacing: 1.3px;
+  color: #3a3d85;
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
 }
 section.portfolio-sites img {
-    width: 600px;
-    height: 285px;
-    border-radius: 3px;
+  width: 600px;
+  height: 285px;
+  border-radius: 3px;
 }
 div.container-img-social {
-    width: 100%;
-    height: 230px;
-    background-color: #E6E7F0;
-    border-radius: 5px;
-    margin: 0 auto;
+  width: 100%;
+  height: 230px;
+  background-color: #e6e7f0;
+  border-radius: 5px;
+  margin: 0 auto;
 }
 .bottom {
-    margin-top: 100px !important;
+  margin-top: 100px !important;
 }
 div.container-img-social img {
-    width: 100%;
-    height: 100%;
-    border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
 }
 
 @media only screen and (max-width: 520px) {
-    section.portfolio-sites img {
-        width: 100%;
-        height: 180px;
-    }
-    p.paragraph-portfolio {
-        margin-top: 10px;
-        text-align: center;
-    }
-    div.bottom {
-        margin-top: 30px !important;
-    }
-    div.container-img-social {
-        width: 80%;
-        height: 250px;
-    }
-    section.portfolio-sites img {
-        width: 95%;
-        padding-left: 0.7rem;
-        border-radius: none;
-    }
+  section.portfolio-sites img {
+    width: 100%;
+    height: 180px;
+  }
+  p.paragraph-portfolio {
+    margin-top: 10px;
+    text-align: center;
+  }
+  div.bottom {
+    margin-top: 30px !important;
+  }
+  div.container-img-social {
+    width: 80%;
+    height: 250px;
+  }
+  section.portfolio-sites img {
+    width: 95%;
+    padding-left: 0.7rem;
+    border-radius: none;
+  }
 }

@@ -1,121 +1,120 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
 div.container-default {
-    width: 1080px;
-    margin: 0 auto;
+  width: 1080px;
+  margin: 0 auto;
 }
 
 footer {
-    background-color: #E7EAF3;
-    max-height: 120px;
+  background-color: #e7eaf3;
+  max-height: 120px;
 }
 
 footer .logo-footer {
-    width: 250px;
-    height: 100px;
-    cursor: pointer;
+  width: 250px;
+  height: 100px;
+  cursor: pointer;
 }
 
 footer h6 {
-    color: #3A3D85;
-    margin-bottom: 0 !important;
+  color: #3a3d85;
+  margin-bottom: 0 !important;
 }
 
 footer span {
-    font-size: 0.9rem;
-    font-weight: 300;
-    color: #3A3D85;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #3a3d85;
 }
 
 footer .icon-footer {
-    width: 32px;
-    height: 40px;
-    fill: #3A3D85;
-    margin: 30px 5px 5px 0;
-    cursor: pointer;
+  width: 32px;
+  height: 40px;
+  fill: #3a3d85;
+  margin: 30px 5px 5px 0;
+  cursor: pointer;
 }
 
 /*Mobile Styles*/
 @media only screen and (max-width: 520px) {
-    .container-default {
-        width: 100% !important;
-        margin: 0;
-    }
+  .container-default {
+    width: 100% !important;
+    margin: 0;
+  }
 
-    footer {
-        max-height: 280px !important;
-        margin-top: 20px;
-        width: 100%;
-    }
+  footer {
+    max-height: 280px !important;
+    margin-top: 20px;
+    width: 100%;
+  }
 
-    div.d-block-mobile-footer {
-        display: block;
-    }
+  div.d-block-mobile-footer {
+    display: block;
+  }
 
-    div.text-center-footer-mobile {
-        text-align: center !important;
-    }
+  div.text-center-footer-mobile {
+    text-align: center !important;
+  }
 
-    div.text-center-footer-mobile svg {
-        margin: 20px 0 0 0 !important;
-    }
+  div.text-center-footer-mobile svg {
+    margin: 20px 0 0 0 !important;
+  }
 
-    .pt-mobile {
-        padding-top: 0 !important;
-    }
+  .pt-mobile {
+    padding-top: 0 !important;
+  }
 
-    .p-mobile {
-        padding: 0 15px;
-    }
+  .p-mobile {
+    padding: 0 15px;
+  }
 
-    div.d-block-mobile {
-        display: block !important;
-    }
+  div.d-block-mobile {
+    display: block !important;
+  }
 
-    div.width-mobile {
-        width: 100% !important;
-        padding: 1.5rem;
-    }
+  div.width-mobile {
+    width: 100% !important;
+    padding: 1.5rem;
+  }
 
-    div.text-center-mobile {
-        text-align: center;
-    }
+  div.text-center-mobile {
+    text-align: center;
+  }
 }
 
 /* button WPP styles */
 div.container-whatsapp {
-    width: 60px;
-    height: 60px;
-    border-radius: 50px;
-    position: fixed;
-    bottom: 5%;
-    right: 4%;
-    z-index: 4;
-    cursor: pointer;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 5%;
+  right: 4%;
+  z-index: 4;
+  cursor: pointer;
 }
 
 div.container-whatsapp .icon-whats {
-    width: 60px;
-    height: 60px;
-    fill: #50ec62;
-    transition: 0.5s;
+  width: 60px;
+  height: 60px;
+  fill: #50ec62;
+  transition: 0.5s;
 }
 
 div.container-whatsapp .icon-whats:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
+  transform: scale(1.1);
+  transition: 0.5s;
 }
 
 @media only screen and (max-width: 520px) {
-    div.container-whatsapp {
-        position: fixed;
-        right: 8%;
-        bottom: 4%;
-
-    }
+  div.container-whatsapp {
+    position: fixed;
+    right: 8%;
+    bottom: 4%;
+  }
 }

@@ -23,7 +23,7 @@
 npm install
 ```
 
-## Compiles and hot-reloads for development
+## Start server in development environment
 
 ```
 npm start
